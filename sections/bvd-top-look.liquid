@@ -1,0 +1,121 @@
+{%- style -%}
+.top-look{
+    width: 100%;
+    max-width:980px;
+    margin:auto;
+}
+.top-look--item{
+    position:relative;
+    margin-bottom:6px;
+}
+.top-look--item > a{
+  transition: opacity 0.3s ease;
+}
+.top-look--item > a:hover {
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+.top-look--item .item--image::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.24);
+  position: absolute;
+  top: 0;
+}
+.top-look--item .item--image img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+.top-look--item .item--meta{
+  z-index: 99;
+}
+.top-look--item .item--meta{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.top-look--item .item--meta .sub-heading{
+    color:white;
+   font-size: 1.2rem; 
+   text-align: center;
+   margin: auto;
+}
+.top-look--item .item--meta h3{
+  color:white;
+  font-size: 1.8rem; 
+  text-align: center;
+  margin: auto;
+}
+@media screen and (min-width: 769px) {
+.top-look{
+    display: flex;
+    gap: 8px;
+}
+}
+{%- endstyle -%}
+
+{% for block in section.blocks %}
+<div class="top-look--item">
+    {% if block.settings.link %}<a href="{{ block.settings.link }}">{% endif %}
+        <div class="item--image">
+            <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.image-sp.alt | escape }}" />
+        </div>
+        <div class="item--meta">
+            {% if block.settings.heading-sub %}<p class="sub-heading">{{ block.settings.heading-sub }}</p>{% endif %}
+            {{ block.settings.heading | newline_to_br }}          
+        </div>
+    {% if block.settings.link %}</a>{% endif %}
+</div>
+{% endfor %}
+
+{% javascript %}
+{% endjavascript %}
+{% schema %}
+  {
+    "name": "TOP LOOK Banner",
+    "tag": "section",
+    "class": "top-look",
+    "settings": [],    
+    "blocks": [
+      {
+        "name" : "バナー",
+        "type" : "image",
+        "settings" : [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "バナー画像",
+            "info": "画像はPC・SP共通"
+          },
+          {
+            "type": "text",
+            "id": "heading-sub",
+            "label": "サブタイトル"
+          },          
+          {
+            "type": "richtext",
+            "id": "heading",
+            "default": "<h2>ブロックタイトル</h2>",
+            "label": "タイトル"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "リンク先"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name" : "TOP LOOK Banner"
+      }
+    ]
+  }
+{% endschema %}

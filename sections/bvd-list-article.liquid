@@ -1,0 +1,178 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+.blogs-list-item__title p{
+  font-size: calc(var(--font-heading-scale) * 1.2rem);
+}
+@media screen and (min-width: 751px) {
+  .blogs-list-item__title p{
+    font-size: calc(var(--font-heading-scale) * 1.4rem);
+  }
+}
+{%- endstyle -%}
+
+<div class="featured-blog-custom-list page-width color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
+  <div class="isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+
+  {%- if section.settings.title != blank -%}
+    <div class="top-section__title page-width">
+        <h2 class="inline-richtext {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ section.settings.title }}
+        </h2>
+    </div>
+  {%- endif -%}
+
+
+    
+    <ul class="blogs-list">
+    {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+      <li class="blogs-list-item">
+        <a href="{{ article.url }}">
+        <div class="blogs-list-item__contents">
+          <div class="blogs-list-item__info">
+                {% if section.settings.show_date %}
+                  <span class="blogs-list-item__date">{{ article.published_at | date: "%Y &frasl; %m &frasl; %d" }}</span>
+                {% endif %}
+                {% if section.settings.show_blogtags %}          
+                  <span class="blogs-list-item__tags">{{ article.tags }}</span>
+                {% endif %}
+          </div>
+          <div class="blogs-list-item__title">
+            <p>{{ article.title | truncate: 68 | escape }}</p>
+          </div>
+        </div>
+        </a>
+      </li>
+    {%- endfor -%}
+    </ul>
+
+    
+    {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
+      <div
+        class="moreBtn-wh center {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+        {% endif %}
+      >
+        <a
+          href="{{ section.settings.blog.url }}"
+          id="ViewAll-{{ section.id }}"
+          class=""
+          aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+        >MORE</a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ブログ記事リスト表示",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "見出し"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.featured-blog.settings.blog.label"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.featured-blog.settings.post_limit.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.featured-blog.settings.columns_desktop.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.featured-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_blogtags",
+      "label": "タグを表示する",
+      "default": false
+    },     
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "t:sections.featured-blog.settings.show_view_all.label"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "t:sections.featured-collection.settings.columns_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.featured-collection.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.featured-collection.settings.columns_mobile.options__2.label"
+        }
+      ]
+    },    
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "TOP Article list"
+    }
+  ]
+}
+{% endschema %}

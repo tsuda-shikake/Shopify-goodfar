@@ -1,0 +1,155 @@
+<section class="gf-top-mv">
+
+  <div class="gf-top-mv__media gf-top-mv__media--pc">
+    {% if section.settings.pc_video != blank %}
+      {{
+        section.settings.pc_video
+        | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          playsinline: true,
+          class: 'gf-top-mv__video'
+      }}
+    {% elsif section.settings.pc_image != blank %}
+      {{
+        section.settings.pc_image
+        | image_url: width: 2000
+        | image_tag:
+          class: 'gf-top-mv__image',
+          loading: 'eager'
+      }}
+    {% endif %}
+  </div>
+
+  <div class="gf-top-mv__media gf-top-mv__media--sp">
+    {% if section.settings.sp_video != blank %}
+      {{
+        section.settings.sp_video
+        | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          playsinline: true,
+          class: 'gf-top-mv__video'
+      }}
+    {% elsif section.settings.sp_image != blank %}
+      {{
+        section.settings.sp_image
+        | image_url: width: 1000
+        | image_tag:
+          class: 'gf-top-mv__image',
+          loading: 'eager'
+      }}
+    {% endif %}
+  </div>
+
+
+    <div class="gf-top-mv__logo">
+    <img
+        src="{{ 'gf-logo_bottom.svg' | asset_url }}"
+        class="gf-top-mv__logo-image"
+        alt="GF LOGO"
+        width="600"
+        height="auto"
+    >
+    </div>
+
+</section>
+
+
+<style>
+.gf-top-mv {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gf-top-mv__media {
+  position: absolute;
+  inset: 0;
+}
+
+.gf-top-mv__video,
+.gf-top-mv__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gf-top-mv__logo {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gf-top-mv__logo-image {
+  width: min(60vw, 470px);
+  height: auto;
+}
+
+.gf-top-mv__media--sp {
+  display: none;
+}
+
+
+@media screen and (max-width: 749px) {
+
+  .gf-top-mv {
+    height: 100svh;
+  }
+
+  .gf-top-mv__media--pc {
+    display: none;
+  }
+
+  .gf-top-mv__media--sp {
+    display: block;
+  }
+
+  .gf-top-mv__logo-image {
+    width: 75vw;
+  }
+
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "GF TOP MV",
+  "settings": [
+    {
+      "type": "video",
+      "id": "pc_video",
+      "label": "PC 動画"
+    },
+    {
+      "type": "image_picker",
+      "id": "pc_image",
+      "label": "PC 画像"
+    },
+    {
+      "type": "video",
+      "id": "sp_video",
+      "label": "SP 動画"
+    },
+    {
+      "type": "image_picker",
+      "id": "sp_image",
+      "label": "SP 画像"
+    }
+  ],
+  "presets": [
+    {
+      "name": "GF TOP MV"
+    }
+  ]
+}
+{% endschema %}

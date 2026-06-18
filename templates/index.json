@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gf_top_mv_CK6GLL": {
+      "type": "gf-top-mv",
+      "name": "GF TOP MV",
+      "settings": {
+        "pc_image": "shopify://shop_images/GF_mv_pc.png",
+        "sp_image": "shopify://shop_images/GF_mv_sp.png"
+      }
+    },
+    "rich_text_zKr6ak": {
+      "type": "rich-text",
+      "blocks": {
+        "text_AgWgmK": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5>【重要】<a href=\"https://store.bvd.jp/blogs/topics/%E9%87%8D%E8%A6%81-%E5%80%89%E5%BA%AB%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B\" target=\"_blank\" title=\"https://store.bvd.jp/blogs/topics/%E9%87%8D%E8%A6%81-%E5%80%89%E5%BA%AB%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B\">倉庫メンテナンスのお知らせ</a></h5><h5></h5><h5></h5>"
+          }
+        },
+        "text_Fh8dK9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h3><a href=\"https://store.bvd.jp/blogs/topics/20260427\">GW休業のお知らせ</a></h3>"
+          }
+        },
+        "text_iQNUJL": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h3><a href=\"https://store.bvd.jp/blogs/topics/POPUP\" title=\"https://store.bvd.jp/blogs/topics/POPUP\">創業150周年記念ポップアップ開催</a></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "text_AgWgmK",
+        "text_Fh8dK9",
+        "text_iQNUJL"
+      ],
+      "custom_css": [
+        ".rich-text {margin: auto; max-width: 980px;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "bvd_banner_LpFVDJ": {
+      "type": "bvd-banner",
+      "blocks": {
+        "image_picker_3F67RY": {
+          "type": "image_picker",
+          "settings": {
+            "image-pc": "shopify://shop_images/GF_sample.png",
+            "image-sp": "shopify://shop_images/GF_sample.png",
+            "banner-text": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_3F67RY"
+      ],
+      "name": "Contents banner",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "bvd_top_look_C9KktD": {
+      "type": "bvd-top-look",
+      "blocks": {
+        "image_LCaBJJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/look_CIRCUC-STRIPE-TRUNKS.jpg",
+            "heading-sub": "T-shirt",
+            "heading": "<h3>Field Play Tec</h3>",
+            "link": ""
+          }
+        },
+        "image_9XaAcf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/look_DoubleTOUGH-NECK-LOOSE-FIT-T-shirt.jpg",
+            "heading-sub": "base layer",
+            "heading": "<h3>GRID-DRY</h3>",
+            "link": ""
+          }
+        },
+        "image_XhHfPr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/grid-tec_orange.jpg",
+            "heading-sub": "base layer",
+            "heading": "<h3>GRID-TEC ＋</h3>",
+            "link": "shopify://collections/men-grid-tec"
+          }
+        }
+      },
+      "block_order": [
+        "image_LCaBJJ",
+        "image_9XaAcf",
+        "image_XhHfPr"
+      ],
+      "custom_css": [
+        ".top-look {margin-bottom: 80px; max-width: 110rem;}",
+        "@media screen and (min-width: 769px) {.top-look {padding: 0 5rem; }}"
+      ],
+      "name": "TOP LOOK Banner",
+      "settings": {}
+    }
+  },
+  "order": [
+    "gf_top_mv_CK6GLL",
+    "rich_text_zKr6ak",
+    "bvd_banner_LpFVDJ",
+    "bvd_top_look_C9KktD"
+  ]
+}

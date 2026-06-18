@@ -1,0 +1,70 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.mainvisual{
+    max-width: 980px;
+    margin: 0 auto 5rem;
+}
+.mainvisual img{
+    width:100%;
+}
+.contents-width{
+    max-width:462px;
+}
+.contents-width .rte{
+    margin-bottom:5rem;
+}
+.contents-width h2{
+    font-family: "Noto Serif JP", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: calc(var(--font-heading-scale) * 2.5rem);
+    letter-spacing: 0.09em;
+    margin-bottom: 3rem;
+}
+.contents-width p{
+    color: rgb(var(--color-foreground));
+    font-size: calc(var(--font-heading-scale) * 1.3rem);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.17px;
+}
+
+{%- endstyle -%}
+
+<div class="mainvisual">
+  <picture>
+    <source srcset="{{ section.settings.image-pc | img_url: "1920x" }}" alt="{{ section.settings.image-pc.alt | escape }}" media="(min-width: 769px)">
+    <img src="{{ section.settings.image-sp | img_url: "768x" }}" alt="{{ section.settings.image-sp.alt | escape }}" />
+  </picture>
+</div>
+<div class="contents-width page-width page-width--narrow">
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content }}
+  </div>
+  <div class="linkbtn linkbtn-arrow">
+    <div class="linkbtn--item"><a href="https://www.bvd.jp/" target="_blank">ブランドサイトはこちら</a></div>
+    <div class="linkbtn--item"><a href="https://store.fujibo-ap.jp/" target="_blank">インナーアイテムはこちら</a></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image-pc",
+      "label": "画像PC"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-sp",
+      "label": "画像SP"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,179 @@
+{% comment %} 追加CSS {% endcomment %}
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+{% comment %} 追加CSS {% endcomment %}
+
+{% comment %} 追加JS {% endcomment %}
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script>
+<script src="https://cdn.rawgit.com/osamutake/japanese-holidays-js/v1.0.10/lib/japanese-holidays.min.js" defer></script>
+{% comment %} 追加JS {% endcomment %}
+
+
+{%- style -%}
+.date-picker {
+  font-size: 16px;
+  text-align: right;
+  vertical-align: middle;
+  margin: 0 0 0 auto;
+}
+
+.date-picker label {
+  margin: 0;
+}
+
+.date-picker tr td:nth-child(2) {
+padding-left: 1em;
+}
+
+.date-picker td {
+  vertical-align: baseline;
+  padding: 0.5em 0;
+  height: 1.5em;
+}
+
+#delivery-date {
+  width: 7.5em;
+  height: 28px;
+  padding: 0;
+  background-color: #fff;
+  border: 0.1px solid #555;
+  color: #333;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#delivery-time {
+  -webkit-appearance: none;
+  width: 7.5em;
+  height: 28px;
+  padding: 0 0 0 2em;
+  background-color: #fff;
+  border: 0.1px solid #555;
+  color: #333;
+  border-radius: 5px;
+  font-size: 16px;
+}
+{%- endstyle -%}
+<div class="page-width">
+<table class="cart-attribute__field date-picker">
+  <tr>
+    <td>
+      <label for="delivery-date">お届け希望日</label>
+    </td>
+    <td>
+      <input
+        id="delivery-date"
+        type="text"
+        name="attributes[delivery date]"
+        value="{{ cart.attributes["delivery date"] }}"
+        form="cart"
+        readonly="readonly"
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>お届け希望時間</label>
+    </td>
+    <td id="delivery-time-container">
+      <select id="delivery-time" name="attributes[delivery time]" form="cart">
+        <option
+          value=""
+          {% if cart.attributes['delivery date'] == '' %}
+            selected
+          {% endif %}
+        ></option>
+        <option
+          value="午前中"
+          {% if cart.attributes['delivery time'] == '午前中' %}
+            selected
+          {% endif %}
+        >
+          午前中
+        </option>
+        <option
+          value="12:00〜14:00"
+          {% if cart.attributes['delivery time'] == '12:00〜14:00' %}
+            selected
+          {% endif %}
+        >
+          12:00〜14:00
+        </option>
+        <option
+          value="14:00〜16:00"
+          {% if cart.attributes['delivery time'] == '14:00〜16:00' %}
+            selected
+          {% endif %}
+        >
+          14:00〜16:00
+        </option>
+        <option
+          value="16:00〜18:00"
+          {% if cart.attributes['delivery time'] == '16:00〜18:00' %}
+            selected
+          {% endif %}
+        >
+          16:00〜18:00
+        </option>
+        <option
+          value="18:00～20:00"
+          {% if cart.attributes['delivery time'] == '18:00～20:00' %}
+            selected
+          {% endif %}
+        >
+          18:00～20:00
+        </option>
+        <option
+          value="19:00～21:00"
+          {% if cart.attributes['delivery time'] == '19:00～21:00' %}
+            selected
+          {% endif %}
+        >
+          19:00～21:00
+        </option>
+      </select>
+    </td>
+  </tr>
+</table>
+</div>
+
+<script>
+  window.onload = function () {
+
+
+    {% comment %} 最短指定日：注文日+8 {% endcomment %}
+    let minDate = +8;
+    {% comment %} 注文日を取得 {% endcomment %}
+    let date = new Date();
+
+    {% comment %} チェック用(下2行のコメントアウトを解除し、?に数字を代入して確認できる) {% endcomment %}
+    {% comment %} date.setDate(date.getDate() + ?);
+    console.log('注文日：' + date) {% endcomment %}
+    {% comment %} チェック用 {% endcomment %}
+
+
+    {% comment %} 注文日の翌日を取得 {% endcomment %}
+    date.setDate(date.getDate() + 1);
+
+    {% comment %} 祝日チェック {% endcomment %}
+    let holiday = JapaneseHolidays.isHoliday(date);
+
+
+    {% comment %} 注文日翌日から最短の営業日を取得し、土日祝の場合は最短指定日を+1する（minDate++） {% endcomment %}
+    while (date.getDay() === 0 || date.getDay() === 6) {
+      minDate++;
+      date.setDate(date.getDate() + 1);
+      holiday = JapaneseHolidays.isHoliday(date);
+    }
+    {% comment %} チェック用（下1行のコメントアウトを解除し、最短発送日を確認） {% endcomment %}
+    {% comment %} console.log('発送日：'+ date) {% endcomment %}
+    {% comment %} チェック用 {% endcomment %}
+
+    {% comment %} 最短指定日＋13日まで選択可能{% endcomment %}
+    $('#delivery-date').datepicker({
+      minDate: minDate,
+      maxDate: +13 + minDate,
+      dateFormat: 'dd/mm/yy',
+    });
+  };
+</script>

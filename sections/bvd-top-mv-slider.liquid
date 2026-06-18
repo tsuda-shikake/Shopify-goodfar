@@ -1,0 +1,136 @@
+{%- style -%}
+  .top-mv {
+    overflow: hidden;
+    position: relative;
+  }
+  .top-mv .item{
+    position: relative;
+    z-index: 1;
+  }
+  .top-mv .item > a{
+    transition: opacity 0.3s ease;
+  }
+  .top-mv .item > a:hover {
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+  }
+  .top-mv .item--image img{
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  .top-mv .swiper-pagination-bullet{
+    margin-right: 1rem !important;
+    width: calc(var(--font-heading-scale) * 1.4rem);
+    height: calc(var(--font-heading-scale) * 1.4rem);
+    border-radius: 50%;
+    background: var(--color-primary);
+    opacity: 1;
+    border:1px solid white;
+  }
+  .top-mv .swiper-pagination-bullet-active{
+    background: white !important;
+  }
+  
+  @media screen and (min-width: 769px) {
+    .top-mv--logo {
+      top: 48%;
+    }
+    .top-mv--logo img {
+      max-width: 256px;
+      width:20vw;
+      height: auto;
+    }
+    .top-mv .item--image picture{
+      width: 100vw;
+      aspect-ratio: 16 / 9;
+    }
+    .top-mv .swiper-pagination{
+      text-align: center;
+      bottom: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .top-mv .swiper {
+      width: 100%;
+    }    
+    .top-mv .item--image picture{
+      width: 100vw;
+      aspect-ratio: 395 / 610;
+    }       
+  } 
+{%- endstyle -%}
+
+<section data-section-id="{{ section.id }}" data-section-type="slideshow" class="swiper-slideshow">
+  <div class="swiper top-mv">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+      <div class="swiper-slide">
+        <div class="item">
+           {% if block.settings.link %}<a href="{{ block.settings.link }}">{% endif %}
+             <div class="item--image">
+               <picture>
+                 <source srcset="{{ block.settings.image-pc | img_url: "1920x" }}" alt="{{ block.settings.image-pc.alt | escape }}" media="(min-width: 769px)">
+                 <img src="{{ block.settings.image-sp | img_url: "768x" }}" alt="{{ block.settings.image-sp.alt | escape }}" />
+               </picture>
+             </div>
+           {% if block.settings.link %}</a>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+{% javascript %}
+const bullets = new Swiper(".top-mv", {
+  loop: true,
+  speed: 2000, 
+  autoplay: {
+    delay: 5000, 
+  },
+  pagination: {
+    el: ".swiper-pagination", 
+    type: "bullets",
+    clickable: "clickable"
+  }
+});
+{% endjavascript %}
+{% schema %}
+  {
+    "name": "TOP MV Slider",
+    "class": "top-mv-slider",
+    "limit": 1,
+    "settings": [],    
+    "blocks": [
+      {
+        "name" : "スライド画像",
+        "type" : "image",
+        "settings" : [
+          {
+            "type": "image_picker",
+            "id": "image-pc",
+            "label": "画像PC"
+          },
+          {
+            "type": "image_picker",
+            "id": "image-sp",
+            "label": "画像SP"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "リンク先"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name" : "TOP MV Slider"
+      }
+    ]
+  }
+{% endschema %}

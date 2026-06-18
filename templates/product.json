@@ -1,0 +1,129 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "商品番号：{{ product.metafields.item.code.value }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_aWey6a": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-summary-text\"><p>{{ product.metafields.item.summary | newline_to_br}}</p></div>\n\n<style>.product-summary-text p{font-size:1.4rem;}</style>"
+          }
+        },
+        "custom_liquid_eCwNwW": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<section class=\"spec\">\n {%  if product.metafields.custom.sizechart != blank %}      \n <div class=\"spec--block\">\n  <details class=\"details\" data-details>\n   <summary class=\"summary\" aria-controls=\"panel-1\" aria-expanded=\"false\">サイズ寸法</summary>\n   <div id=\"panel-1\" class=\"details-content\" aria-hidden=\"true\" data-details-content>\n    <div class=\"details-content-inner\">\n    {{ product.metafields.custom.sizechart.value.chart }}\n    </div>\n   </div>\n  </details>\n </div>\n {% endif %}\n <div class=\"spec--block\">\n  <details class=\"details\" data-details>\n   <summary class=\"summary\" aria-controls=\"panel-2\" aria-expanded=\"false\">スペック</summary>\n   <div id=\"panel-2\" class=\"details-content\" aria-hidden=\"true\" data-details-content>\n    <div class=\"details-content-inner\">\n     <dl class=\"specchart\">\n      {%  if product.metafields.item.materials != blank %}\n      <dt>素材</dt>\n      <dd>：{{ product.metafields.item.materials}}</dd>\n      {% endif %}\n      {%  if product.metafields.item.country != blank %}\n      <dt>生産国</dt>\n      <dd>：{{ product.metafields.item.country}}</dd>\n      {% endif %}\n     </dl>\n     {%  if product.metafields.item.handling != blank %}<p class=\"spechandling\">お取り扱いについて：{{ product.metafields.item.handling}}</p>{% endif %}\n     {%  if product.metafields.item.detail != blank %}<p class=\"specdetail\">{{ product.metafields.item.detail}}</p>{% endif %}\n    </div>\n   </div>\n  </details>\n </div>\n</section>\n\n<style>\n.spec {\n  font-size: 1.2rem;\n}\n.spec--block {\n  margin-bottom: 3rem;\n  border-bottom: 1px solid black;\n}\n.spec summary {\n  font-size: 1.4rem;\n}\n\n#sizechart {\n  border-collapse: collapse;\n  line-height: 2.1;\n  box-shadow: none;\n}\n#sizechart th {\n  min-width: 12rem;\n  text-align: left;\n}\n#sizechart th:nth-child(1) {\n  min-width: 6rem;\n}\n#sizechart th,#sizechart td{\n  border: none;\n  padding: 0;   \n}\n@media (min-width: 769px) {\n  .spec {\n    font-size: 1.4rem;\n  }\n  .spec summary {\n    font-size: 1.4rem;\n  }\n  .sizechart th {\n    min-width: 12rem;\n  }\n  .sizechart th:nth-child(1) {\n    min-width: 4rem;\n  }\n}\n.specchart {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  margin-bottom: 0;\n}\n.specchart dt {\n  width: 4em;\n}\n.specchart dd {\n  width: calc(100% - 4em);\n  margin-left: 0;\n  text-indent: -1em;\n}\np.spechandling{\n  margin-top:0;\n}\np.specdetail{\n margin-top:1em; \n}\n/* details summary */\nsummary::-webkit-details-marker {\n  display: none;\n}\n\n.details {\n  margin-top: 30px;\n  overflow: clip;\n  cursor: pointer;\n}\n.details[open] .summary::before {\n  opacity: 0;\n}\n.details[open] .summary::after {\n  transform: rotate(0);\n}\n.details[open] .details-content {\n  height: auto;\n}\n.details[open] .details-content-inner {\n  padding: 1rem 1rem 5rem;\n}\n\n.summary {\n  display: grid;\n  padding: 1rem;\n  position: relative;\n  grid-template-columns: 1fr auto;\n}\n.summary::before, .summary::after {\n  content: \"\";\n  display: block;\n  background-color: black;\n  position: absolute;\n  top: 50%;\n  width: 1rem;\n  height: 1px;\n  right: 1rem;\n}\n.summary::after {\n  transform: rotate(90deg);\n  transition-duration: 0.3s;\n}\n</style>\n\n<script>\n//accordion\ndocument.addEventListener('DOMContentLoaded', () => {\n  const title = document.querySelectorAll('.js-accordion-title');\n\n  for (let i = 0; i < title.length; i++) {\n    let titleEach = title[i];\n    let content = titleEach.nextElementSibling;\n    titleEach.addEventListener('click', () => {\n      titleEach.classList.toggle('is-active');\n      content.classList.toggle('is-open');\n    });\n  }\n});\n\nconst DETAILS_SEL = '[data-details]';\nconst DETAILS_CONTENT_SEL = '[data-details-content]';\n\nconst detailsElements = document.querySelectorAll(DETAILS_SEL);\n\ndetailsElements.forEach((detail) => {\n  const summary = detail.querySelector('summary');\n  const content = detail.querySelector(DETAILS_CONTENT_SEL);\n\n  if (detail.hasAttribute('open')) {\n    content.style.height = `${content.scrollHeight}px`;\n  } else {\n    content.style.height = '0px';\n  }\n\n  summary.addEventListener('click', (e) => {\n    e.preventDefault();\n\n    const isOpen = detail.hasAttribute('open');\n    const duration = 150;\n\n    if (!isOpen) {\n      detail.setAttribute('open', 'true'); \n      summary.setAttribute('aria-expanded', 'true');\n      content.setAttribute('aria-hidden', 'false');\n      content.style.height = 'auto'; // 自動高さに設定し直す\n      const contentHeight = content.scrollHeight;\n      content.style.height = '0px';\n      requestAnimationFrame(() => {\n        content.style.transition = `height ${duration}ms ease`;\n        content.style.height = `${contentHeight}px`;\n      });\n      content.addEventListener(\n        'transitionend',\n        () => {\n          content.style.height = 'auto';\n        },\n        { once: true } \n      );\n    } else {\n      const contentHeight = content.scrollHeight;\n      content.style.height = `${contentHeight}px`;\n      requestAnimationFrame(() => {\n        content.style.transition = `height ${duration}ms ease`;\n        content.style.height = '0px';\n      });\n      content.addEventListener(\n        'transitionend',\n        () => {\n          detail.removeAttribute('open');\n          summary.setAttribute('aria-expanded', 'false');\n          content.setAttribute('aria-hidden', 'true');\n          content.style.height = '';\n        },\n        { once: true }\n      );\n    }\n  });\n});\n</script>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "custom_liquid_aWey6a",
+        "custom_liquid_eCwNwW",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        ".product-form__input--pill input[type=\"radio\"] + label {border-radius: 0;}",
+        ".se-base-option.ml {margin-left: 0 !important;}",
+        ".se-option-title {display: flex;}",
+        ".se-option-name {margin-right: 1em;}",
+        "@media screen and (min-width: 990px) {.product--large:not(.product--no-media) .product__media-wrapper {max-width: 55%; width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2); } .product--large:not(.product--no-media) .product__info-wrapper {max-width: 45%; width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2); }}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "関連商品",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 100,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

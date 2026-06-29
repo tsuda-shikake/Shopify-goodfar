@@ -2,7 +2,7 @@
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
 
-<!-- Google Tag Manager 
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -271,6 +271,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 {% comment %}add custom start{% endcomment %}
     {{ 'bvd-customize.css' | asset_url | stylesheet_tag }}
+    {{ 'gf-customize.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 {% comment %}add custom end{% endcomment %}
 

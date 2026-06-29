@@ -64,7 +64,7 @@
 <div class="top-look--item">
     {% if block.settings.link %}<a href="{{ block.settings.link }}">{% endif %}
         <div class="item--image">
-            <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.image-sp.alt | escape }}" />
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.heading }}  " />
         </div>
         <div class="item--meta">
             {% if block.settings.heading-sub %}<p class="sub-heading">{{ block.settings.heading-sub }}</p>{% endif %}

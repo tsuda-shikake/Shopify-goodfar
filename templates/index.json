@@ -13,73 +13,200 @@
       "type": "gf-top-mv",
       "name": "GF TOP MV",
       "settings": {
+        "pc_video": "shopify://files/videos/goodfar_pc.mp4",
         "pc_image": "shopify://shop_images/GF_mv_pc.png",
+        "sp_video": "shopify://files/videos/goodfar_sp.mp4",
         "sp_image": "shopify://shop_images/GF_mv_sp.png"
       }
     },
-    "rich_text_zKr6ak": {
-      "type": "rich-text",
+    "gf_banner_yhbWkC": {
+      "type": "gf-banner",
       "blocks": {
-        "text_AgWgmK": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<h5>【重要】<a href=\"https://store.bvd.jp/blogs/topics/%E9%87%8D%E8%A6%81-%E5%80%89%E5%BA%AB%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B\" target=\"_blank\" title=\"https://store.bvd.jp/blogs/topics/%E9%87%8D%E8%A6%81-%E5%80%89%E5%BA%AB%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B\">倉庫メンテナンスのお知らせ</a></h5><h5></h5><h5></h5>"
-          }
-        },
-        "text_Fh8dK9": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<h3><a href=\"https://store.bvd.jp/blogs/topics/20260427\">GW休業のお知らせ</a></h3>"
-          }
-        },
-        "text_iQNUJL": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<h3><a href=\"https://store.bvd.jp/blogs/topics/POPUP\" title=\"https://store.bvd.jp/blogs/topics/POPUP\">創業150周年記念ポップアップ開催</a></h3>"
-          }
-        }
-      },
-      "block_order": [
-        "text_AgWgmK",
-        "text_Fh8dK9",
-        "text_iQNUJL"
-      ],
-      "custom_css": [
-        ".rich-text {margin: auto; max-width: 980px;}"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 60,
-        "padding_bottom": 0
-      }
-    },
-    "bvd_banner_LpFVDJ": {
-      "type": "bvd-banner",
-      "blocks": {
-        "image_picker_3F67RY": {
+        "image_picker_CNDfGk": {
           "type": "image_picker",
           "settings": {
-            "image-pc": "shopify://shop_images/GF_sample.png",
-            "image-sp": "shopify://shop_images/GF_sample.png",
+            "image-pc": "shopify://shop_images/top1_pc.png",
+            "image-sp": "shopify://shop_images/top1_sp.png",
+            "image_bottom": 0,
+            "banner-heading": "",
             "banner-text": "",
+            "text-color": "",
             "url": ""
           }
         }
       },
       "block_order": [
-        "image_picker_3F67RY"
+        "image_picker_CNDfGk"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.page-width {padding: 0; }}"
       ],
       "name": "Contents banner",
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 80
+        "padding_top": 10,
+        "padding_bottom": 0
+      }
+    },
+    "gf_banner_WgdQyk": {
+      "type": "gf-banner",
+      "blocks": {
+        "image_picker_EY4bqV": {
+          "type": "image_picker",
+          "settings": {
+            "image-pc": "shopify://shop_images/top2_pc.png",
+            "image-sp": "shopify://shop_images/top2_sp.png",
+            "image_bottom": 0,
+            "banner-heading": "",
+            "banner-text": "",
+            "text-color": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_EY4bqV"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.page-width {padding: 0; }}"
+      ],
+      "name": "Contents banner",
+      "settings": {
+        "padding_top": 2,
+        "padding_bottom": 0
+      }
+    },
+    "gf_banner_yAaUF7": {
+      "type": "gf-banner",
+      "blocks": {
+        "image_picker_EU6JAE": {
+          "type": "image_picker",
+          "settings": {
+            "image-pc": "shopify://shop_images/top3_pc.png",
+            "image-sp": "shopify://shop_images/top3_sp.png",
+            "image_bottom": 0,
+            "banner-heading": "",
+            "banner-text": "",
+            "text-color": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_EU6JAE"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.page-width {padding: 0; }}"
+      ],
+      "name": "Contents banner",
+      "settings": {
+        "padding_top": 2,
+        "padding_bottom": 0
+      }
+    },
+    "gf_banner_7MzrQ6": {
+      "type": "gf-banner",
+      "blocks": {
+        "image_picker_8Ytaay": {
+          "type": "image_picker",
+          "settings": {
+            "image-pc": "shopify://shop_images/top4_pc.png",
+            "image-sp": "shopify://shop_images/top4_sp.png",
+            "image_bottom": 0,
+            "banner-heading": "",
+            "banner-text": "",
+            "text-color": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_8Ytaay"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.page-width {padding: 0; }}"
+      ],
+      "name": "Contents banner",
+      "settings": {
+        "padding_top": 2,
+        "padding_bottom": 0
+      }
+    },
+    "gf_banner_tarahD": {
+      "type": "gf-banner",
+      "blocks": {
+        "image_picker_z4VL3F": {
+          "type": "image_picker",
+          "settings": {
+            "image-pc": "shopify://shop_images/top5_pc.png",
+            "image-sp": "shopify://shop_images/top5_sp.png",
+            "image_bottom": 0,
+            "banner-heading": "",
+            "banner-text": "",
+            "text-color": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_z4VL3F"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.page-width {padding: 0; }}"
+      ],
+      "name": "Contents banner",
+      "settings": {
+        "padding_top": 2,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_UcUiJj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Pp6JyK": {
+          "type": "heading",
+          "settings": {
+            "heading": "A little farther, a lot better",
+            "heading_size": "h2"
+          }
+        },
+        "text_DkbftA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>もう少し遠くへ行けば、もっと良い体験や風景が待っている。GOOD FARは、ハイキング、キャンプ、ランニング、バイクなど、アウトドアフィールドで新しい体験に挑むプレイヤーを応援します。</p>"
+          }
+        },
+        "button_kVWnPf": {
+          "type": "button",
+          "settings": {
+            "button_label": "ABOUT - GOOD FAR",
+            "button_link": "shopify://pages/about-goodfar",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Pp6JyK",
+        "text_DkbftA",
+        "button_kVWnPf"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {max-width: 562px;}",
+        "h2 {text-align: center; margin-bottom: 2em; font-family: serif; letter-spacing: 0.05em;}",
+        "p {font-size: 13px; letter-spacing: 1.17px;}",
+        ".rich-text__blocks.left .rich-text__buttons {justify-content: center;}",
+        ".rich-text__buttons a {font-size: 12px; width: 347px; margin-top: 3rem;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-20e8fb3c-14f4-4b45-8707-8b3455ecbf95",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 100
       }
     },
     "bvd_top_look_C9KktD": {
@@ -88,48 +215,164 @@
         "image_LCaBJJ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/look_CIRCUC-STRIPE-TRUNKS.jpg",
-            "heading-sub": "T-shirt",
+            "image": "shopify://shop_images/top-look-banner_field-play-tec.jpg",
+            "heading-sub": "暑い日こそ遊びたくなるTシャツ",
             "heading": "<h3>Field Play Tec</h3>",
-            "link": ""
+            "link": "shopify://collections/field-play-tec"
           }
         },
         "image_9XaAcf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/look_DoubleTOUGH-NECK-LOOSE-FIT-T-shirt.jpg",
-            "heading-sub": "base layer",
+            "image": "shopify://shop_images/top-look-banner_grid-dry.jpg",
+            "heading-sub": "山が近くなるベースレイヤー",
             "heading": "<h3>GRID-DRY</h3>",
-            "link": ""
-          }
-        },
-        "image_XhHfPr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/grid-tec_orange.jpg",
-            "heading-sub": "base layer",
-            "heading": "<h3>GRID-TEC ＋</h3>",
-            "link": "shopify://collections/men-grid-tec"
+            "link": "shopify://collections/grid-dry"
           }
         }
       },
       "block_order": [
         "image_LCaBJJ",
-        "image_9XaAcf",
-        "image_XhHfPr"
+        "image_9XaAcf"
       ],
       "custom_css": [
-        ".top-look {margin-bottom: 80px; max-width: 110rem;}",
-        "@media screen and (min-width: 769px) {.top-look {padding: 0 5rem; }}"
+        ".top-look {max-width: 110rem;}",
+        "@media screen and (min-width: 769px) {.top-look {padding: 0 5rem; } .top-look > * {width: 50%; }}"
       ],
       "name": "TOP LOOK Banner",
       "settings": {}
+    },
+    "gf_product_list_manual_9bGHcN": {
+      "type": "gf-product-list-manual",
+      "blocks": {
+        "product_RKM6af": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1FP01_front-white.png",
+            "image_hover": "shopify://shop_images/GDF1FP01_back-white.jpg",
+            "title": "Field Play Tec T-shirt",
+            "url": "https://store.bvd.jp/products/gdf1fp01"
+          }
+        },
+        "product_QfCiVw": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF9FP01_white.png",
+            "image_hover": "shopify://shop_images/GDF9FP01_back-white.png",
+            "title": "Field Play Tec T-shirt - JERRY鵜飼 別注プリント",
+            "url": "https://store.bvd.jp/products/gdf9fp01"
+          }
+        },
+        "product_f9ybFc": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_silvergray_b518ba10-547d-49fc-a51c-62faed17d520.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_silvergray.png",
+            "title": "GRID-DRY SLEEVE LESS",
+            "url": "https://store.bvd.jp/products/gdf1gd00"
+          }
+        },
+        "product_bjMpJ6": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD04_front_silvergray.png",
+            "image_hover": "shopify://shop_images/GDF1GD04_back_silvergray.png",
+            "title": "GRID-DRY LONG SLEEVE",
+            "url": "https://store.bvd.jp/products/gdf1gd04"
+          }
+        },
+        "product_LLkL6E": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_sagegreen.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_sagegreen.png",
+            "title": "JERRY鵜飼別注色 GRID-DRY SLEEVE LESS",
+            "url": "https://store.bvd.jp/products/gdf1gd00?variant=53564117647639"
+          }
+        },
+        "product_KPnXhR": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF_FRON.png",
+            "image_hover": "shopify://shop_images/GDF1GD04_back_sagegreen.png",
+            "title": "JERRY鵜飼別注色 GRID-DRY LONG SLEEVE",
+            "url": "https://store.bvd.jp/products/gdf1gd04?variant=53563904262423"
+          }
+        },
+        "product_CVXrL4": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_lightpurple.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_lightpurple.png",
+            "title": "山歩きJP別注色 GRID-DRY SLEEVE LESS",
+            "url": "https://store.bvd.jp/products/gdf1gd00?variant=53564117680407"
+          }
+        },
+        "product_dJWkk9": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD04_front_lightpurple.png",
+            "image_hover": "shopify://shop_images/GDF1GD04_back_lightpurple.png",
+            "title": "山歩きJP別注色 GRID-DRY LONG SLEEVE",
+            "url": "https://store.bvd.jp/products/gdf1gd04?variant=53563904295191"
+          }
+        }
+      },
+      "block_order": [
+        "product_RKM6af",
+        "product_QfCiVw",
+        "product_f9ybFc",
+        "product_bjMpJ6",
+        "product_LLkL6E",
+        "product_KPnXhR",
+        "product_CVXrL4",
+        "product_dJWkk9"
+      ],
+      "custom_css": [
+        ".page-width {max-width: 810px;}"
+      ],
+      "name": "Product List Manual",
+      "settings": {
+        "heading": "",
+        "enable_image_hover": true,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "custom_liquid_tg7kwd": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"renewal page-width\">\n  <div class=\"renewal-card\">\n\n      <div class=\"popup-info-box\">\n          <div class=\"popup-logo-row\">\n            <span class=\"logo-bvd\"><img src=\"https://cdn.shopify.com/s/files/1/0942/4456/9367/files/logo_ex.png?v=1771395332\" alt=\"B.V.D.\"></span>\n            <span class=\"logo-sub\">OFFICIAL EXCLUSIVE<br>ONLINE STORE</span>\n          </div>\n          <p class=\"popup-desc\">\n            GOOD FAR 新ブランドの立ち上げに伴う、<br>\n            サイトリニューアルおよび取り扱いブランド<br>\n            変更のお知らせ\n          </p>\n      </div>\n\n\n    <div class=\"popup-btn-area\">\n      <a href=\"https://goodfar.jp/pages/exclusive-renewal\" class=\"popup-btn popup-btn-red\">\n        <span>お知らせはこちら</span><span class=\"arrow\">→</span>\n      </a>\n      <a href=\"https://goodfar.jp/\" class=\"popup-btn popup-btn-black\">\n        <span>GOOD FAR OFFICIAL WEBはこちら</span><span class=\"arrow\">→</span>\n      </a>\n    </div>\n\n  </div>\n</div>\n\n\n<style>\n.renewal {\n    z-index: 100000;\n    overflow-y: auto;\n    border:1px solid #efefef;\nmax-width: 710px;\n}\n.renewal .popup-info-box {\n    width: 100%;\n    \n    box-sizing: border-box;\n}\n\n.renewal .popup-logo-row {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 14px;\n    margin-bottom: 16px;\npadding: 30px 15% 0;\n}\n.renewal .logo-bvd{\n    max-width: 100px;\n    width: 25%;\n}\n.renewal .logo-bvd img{\n    width: 100%;\n    height: auto;\n}\n.renewal .logo-sub {\n    font-weight: 700;\n    font-size: 0.92rem;\n    line-height: 1.35;\n    color: #111;\n    letter-spacing: 0.3px;\n}\n\n.renewal .popup-desc {\n    margin: 0;\n    font-size: 1.2rem;\n    line-height: 2;\n    color: #111;\n    font-weight: 500;\ntext-align: center;\n}\n\n.renewal .popup-btn-area {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    padding: 20px 24px 50px;\n    box-sizing: border-box;\n}\n.renewal .popup-btn {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    text-decoration: none;\n    padding: 1.1rem 1.4rem;\n    font-size: 1.2rem;\n    line-height: 1.4;\n    transition: opacity 0.2s;\n}\n.renewal .popup-btn:hover { opacity: 0.85; }\n.renewal .popup-btn-red {\n    background: #e02020;\n    color: #fff;\n}\n.renewal .popup-btn-black {\n    background: #000;\n    color: #fff;\n}\n.renewal .popup-btn .arrow {\n    margin-left: 12px;\n    flex-shrink: 0;\n}\n\n/*@media screen and (min-width: 990px) {\n    .renewal .popup-content { max-width: 460px; }\n}*/\n\n@media screen and (min-width: 769px) {\n.renewal .popup-info-box{padding:30px 0 0;}\n.renewal .popup-desc{margin: 3rem auto 2rem;}\n.renewal .popup-desc br:nth-child(2){display:none;}\n.renewal .logo-sub{font-size: 1.2rem;}\n.renewal .popup-desc,.renewal .popup-btn{font-size: 1.3rem;}\n.renewal .popup-btn-area{padding: 20px 15% 50px;}\n}\n@media screen and (max-width: 768px) {\n    .renewal{margin: 0 5%;}\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_9tzrfB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"entrance-popup\" style=\"display:none;\">\n  <div class=\"popup-overlay\"> </div>\n\n  <div class=\"popup-content\">\n    <a href=\"#\" class=\"popup-close\"><img src=\"https://cdn.shopify.com/s/files/1/0942/4456/9367/files/btn-close.svg?v=1772516591\" alt=\"閉じる\"></a>\n\n    <div class=\"popup-card\">\n\n        <div class=\"popup-info-box\">\n            <div class=\"popup-logo-row\">\n              <span class=\"logo-bvd\"><img src=\"https://cdn.shopify.com/s/files/1/0942/4456/9367/files/logo_ex.png?v=1771395332\" alt=\"B.V.D.\"></span>\n              <span class=\"logo-sub\">OFFICIAL EXCLUSIVE<br>ONLINE STORE</span>\n            </div>\n            <p class=\"popup-desc\">\n              GOOD FAR 新ブランドの立ち上げに伴う、<br>\n              サイトリニューアルおよび取り扱いブランド<br>\n              変更のお知らせ\n            </p>\n        </div>\n\n\n      <div class=\"popup-btn-area\">\n        <a href=\"https://goodfar.jp/pages/exclusive-renewal\" class=\"popup-btn popup-btn-red\">\n          <span>お知らせはこちら</span><span class=\"arrow\">→</span>\n        </a>\n        <a href=\"https://goodfar.jp/\" class=\"popup-btn popup-btn-black\">\n          <span>GOOD FAR OFFICIAL WEBはこちら</span><span class=\"arrow\">→</span>\n        </a>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n<style>\n#entrance-popup {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 99999;\n}\n.popup-overlay {\n    position: absolute;\n    top: 0; left: 0;\n    background: rgba(0,0,0,0.3);\n    width: 100%;\n    height: 100%;\n}\n.popup-content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    z-index: 100000;\n    min-width: 320px;\n    max-width: 420px;\n    width: 88%;\n    max-height: 90vh;\n    overflow-y: auto;\n}\n.popup-close {\n    position: absolute;\n    top: -38px;\n    right: 0;\n    z-index: 100001;\n    display: inline-block;\n}\n.popup-close img {\n    width: 28px;\n    height: 28px;\n    display: block;\n}\n\n.popup-card {\n    background: rgba(255,255,255,0.9); \n    overflow: hidden;\n    box-shadow: 0 10px 40px rgba(0,0,0,0.3);\n}\n\n.popup-info-box {\n    width: 100%;\n    padding: 30px 24px 0;\n    box-sizing: border-box;\n}\n\n.popup-logo-row {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 14px;\n    margin-bottom: 16px;\n}\n.logo-bvd{\n    max-width: 100px;\n    width: 25%;\n}\n.logo-bvd img{\n    width: 100%;\n    height: auto;\n}\n.logo-sub {\n    font-weight: 700;\n    font-size: 0.92rem;\n    line-height: 1.35;\n    color: #111;\n    letter-spacing: 0.3px;\n}\n\n.popup-desc {\n    margin: 0;\n    font-size: 1.2rem;\n    line-height: 2;\n    color: #111;\n    font-weight: 500;\n}\n\n.popup-btn-area {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    padding: 20px 24px 26px;\n    box-sizing: border-box;\n}\n.popup-btn {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    text-decoration: none;\n    padding: 1.1rem 1.4rem;\n    font-size: 1.2rem;\n    line-height: 1.4;\n    transition: opacity 0.2s;\n}\n.popup-btn:hover { opacity: 0.85; }\n.popup-btn-red {\n    background: #e02020;\n    color: #fff;\n}\n.popup-btn-black {\n    background: #000;\n    color: #fff;\n}\n.popup-btn .arrow {\n    margin-left: 12px;\n    flex-shrink: 0;\n}\n\n/*@media screen and (min-width: 990px) {\n    .popup-content { max-width: 460px; }\n}*/\n\n@media screen and (min-width: 768px) {\n.popup-info-box{padding:30px 15% 0;}\n.logo-sub{font-size: 1.2rem;}\n.popup-desc,.popup-btn{font-size: 1.3rem;}\n.popup-btn-area{padding: 20px 15% 30px;}\n}\n</style>\n\n<script>\nwindow.addEventListener('DOMContentLoaded', function() {\n    if (window.jQuery) {\n        (function($) {\n            $(function() {\n                // クッキーを確認する関数\n                function getCookie(name) {\n                    var value = \"; \" + document.cookie;\n                    var parts = value.split(\"; \" + name + \"=\");\n                    if (parts.length == 2) return parts.pop().split(\";\").shift();\n                }\n                // 「popup_shown」というクッキーがなければ表示\n                if (!getCookie('popup_shown')) {\n                    $('#entrance-popup').fadeIn(500);\n                }\n                // クッキーをセットする関数（ブラウザを閉じると無効になる設定）\n                function setPopupCookie() {\n                    document.cookie = \"popup_shown=true; path=/\";\n                }\n                // 1. ボタンをクリックした時（リンク遷移はそのまま許可しつつクッキーをセット）\n                $('.popup-btn').on('click', function() {\n                    setPopupCookie();\n                });\n                // 2. ×ボタン、または背景をクリックした時\n                $('.popup-close, .popup-overlay').on('click', function(e) {\n                    e.preventDefault();\n                    setPopupCookie();\n                    $('#entrance-popup').fadeOut(300);\n                });\n            });\n        })(jQuery);\n    }\n});\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "gf_top_mv_CK6GLL",
-    "rich_text_zKr6ak",
-    "bvd_banner_LpFVDJ",
-    "bvd_top_look_C9KktD"
+    "gf_banner_yhbWkC",
+    "gf_banner_WgdQyk",
+    "gf_banner_yAaUF7",
+    "gf_banner_7MzrQ6",
+    "gf_banner_tarahD",
+    "rich_text_UcUiJj",
+    "bvd_top_look_C9KktD",
+    "gf_product_list_manual_9bGHcN",
+    "custom_liquid_tg7kwd",
+    "custom_liquid_9tzrfB"
   ]
 }

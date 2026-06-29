@@ -111,7 +111,7 @@
     "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
-    "social_instagram_link": "https://www.instagram.com/bvd_japan/",
+    "social_instagram_link": "https://www.instagram.com/good_far_official/",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "",
@@ -215,6 +215,28 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-63bf4dbe-22c7-4237-b416-245f74d50a80": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#d90000",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-20e8fb3c-14f4-4b45-8707-8b3455ecbf95": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#da3788",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }

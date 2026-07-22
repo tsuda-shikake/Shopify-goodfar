@@ -251,7 +251,7 @@
             "image": "shopify://shop_images/GDF1FP01_front-white.png",
             "image_hover": "shopify://shop_images/GDF1FP01_back-white.jpg",
             "title": "Field Play Tec T-shirt",
-            "url": "https://store.bvd.jp/products/gdf1fp01"
+            "url": "/products/gdf1fp01"
           }
         },
         "product_QfCiVw": {
@@ -260,7 +260,7 @@
             "image": "shopify://shop_images/GDF9FP01_white.png",
             "image_hover": "shopify://shop_images/GDF9FP01_back-white.png",
             "title": "Field Play Tec T-shirt - JERRY鵜飼 別注プリント",
-            "url": "https://store.bvd.jp/products/gdf9fp01"
+            "url": "/products/gdf9fp01"
           }
         },
         "product_f9ybFc": {
@@ -269,7 +269,7 @@
             "image": "shopify://shop_images/GDF1GD00_front_silvergray_b518ba10-547d-49fc-a51c-62faed17d520.png",
             "image_hover": "shopify://shop_images/GDF1GD00_back_silvergray.png",
             "title": "GRID-DRY SLEEVE LESS",
-            "url": "https://store.bvd.jp/products/gdf1gd00"
+            "url": "/products/gdf1gd00"
           }
         },
         "product_bjMpJ6": {
@@ -278,7 +278,7 @@
             "image": "shopify://shop_images/GDF1GD04_front_silvergray.png",
             "image_hover": "shopify://shop_images/GDF1GD04_back_silvergray.png",
             "title": "GRID-DRY LONG SLEEVE",
-            "url": "https://store.bvd.jp/products/gdf1gd04"
+            "url": "/products/gdf1gd04"
           }
         },
         "product_LLkL6E": {
@@ -286,8 +286,8 @@
           "settings": {
             "image": "shopify://shop_images/GDF1GD00_front_sagegreen.png",
             "image_hover": "shopify://shop_images/GDF1GD00_back_sagegreen.png",
-            "title": "JERRY鵜飼別注色 GRID-DRY SLEEVE LESS",
-            "url": "https://store.bvd.jp/products/gdf1gd00?variant=53564117647639"
+            "title": "山歩きJP別注色 GRID-DRY SLEEVE LESS",
+            "url": "/products/gdf1gd00?variant=53564117647639"
           }
         },
         "product_KPnXhR": {
@@ -295,8 +295,8 @@
           "settings": {
             "image": "shopify://shop_images/GDF_FRON.png",
             "image_hover": "shopify://shop_images/GDF1GD04_back_sagegreen.png",
-            "title": "JERRY鵜飼別注色 GRID-DRY LONG SLEEVE",
-            "url": "https://store.bvd.jp/products/gdf1gd04?variant=53563904262423"
+            "title": "山歩きJP別注色 GRID-DRY LONG SLEEVE",
+            "url": "/products/gdf1gd04?variant=53563904262423"
           }
         },
         "product_CVXrL4": {
@@ -304,8 +304,8 @@
           "settings": {
             "image": "shopify://shop_images/GDF1GD00_front_lightpurple.png",
             "image_hover": "shopify://shop_images/GDF1GD00_back_lightpurple.png",
-            "title": "山歩きJP別注色 GRID-DRY SLEEVE LESS",
-            "url": "https://store.bvd.jp/products/gdf1gd00?variant=53564117680407"
+            "title": "JERRY鵜飼別注色 GRID-DRY SLEEVE LESS",
+            "url": "/products/gdf1gd00?variant=53564117680407"
           }
         },
         "product_dJWkk9": {
@@ -313,8 +313,8 @@
           "settings": {
             "image": "shopify://shop_images/GDF1GD04_front_lightpurple.png",
             "image_hover": "shopify://shop_images/GDF1GD04_back_lightpurple.png",
-            "title": "山歩きJP別注色 GRID-DRY LONG SLEEVE",
-            "url": "https://store.bvd.jp/products/gdf1gd04?variant=53563904295191"
+            "title": "JERRY鵜飼別注色 GRID-DRY LONG SLEEVE",
+            "url": "/products/gdf1gd04?variant=53563904295191"
           }
         }
       },
@@ -328,6 +328,7 @@
         "product_CVXrL4",
         "product_dJWkk9"
       ],
+      "disabled": true,
       "custom_css": [
         ".page-width {max-width: 810px;}"
       ],
@@ -347,7 +348,7 @@
       "settings": {
         "custom_liquid": "<div class=\"renewal page-width\">\n  <div class=\"renewal-card\">\n\n      <div class=\"popup-info-box\">\n          <div class=\"popup-logo-row\">\n            <span class=\"logo-bvd\"><img src=\"https://cdn.shopify.com/s/files/1/0942/4456/9367/files/logo_ex.png?v=1771395332\" alt=\"B.V.D.\"></span>\n            <span class=\"logo-sub\">OFFICIAL EXCLUSIVE<br>ONLINE STORE</span>\n          </div>\n          <p class=\"popup-desc\">\n            GOOD FAR 新ブランドの立ち上げに伴う、<br>\n            サイトリニューアルおよび取り扱いブランド<br>\n            変更のお知らせ\n          </p>\n      </div>\n\n\n    <div class=\"popup-btn-area\">\n      <a href=\"https://goodfar.jp/pages/exclusive-renewal\" class=\"popup-btn popup-btn-red\">\n        <span>お知らせはこちら</span><span class=\"arrow\">→</span>\n      </a>\n      <a href=\"https://goodfar.jp/\" class=\"popup-btn popup-btn-black\">\n        <span>GOOD FAR OFFICIAL WEBはこちら</span><span class=\"arrow\">→</span>\n      </a>\n    </div>\n\n  </div>\n</div>\n\n\n<style>\n.renewal {\n    z-index: 100000;\n    overflow-y: auto;\n    border:1px solid #efefef;\nmax-width: 710px;\n}\n.renewal .popup-info-box {\n    width: 100%;\n    \n    box-sizing: border-box;\n}\n\n.renewal .popup-logo-row {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 14px;\n    margin-bottom: 16px;\npadding: 30px 15% 0;\n}\n.renewal .logo-bvd{\n    max-width: 100px;\n    width: 25%;\n}\n.renewal .logo-bvd img{\n    width: 100%;\n    height: auto;\n}\n.renewal .logo-sub {\n    font-weight: 700;\n    font-size: 0.92rem;\n    line-height: 1.35;\n    color: #111;\n    letter-spacing: 0.3px;\n}\n\n.renewal .popup-desc {\n    margin: 0;\n    font-size: 1.2rem;\n    line-height: 2;\n    color: #111;\n    font-weight: 500;\ntext-align: center;\n}\n\n.renewal .popup-btn-area {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    padding: 20px 24px 50px;\n    box-sizing: border-box;\n}\n.renewal .popup-btn {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    text-decoration: none;\n    padding: 1.1rem 1.4rem;\n    font-size: 1.2rem;\n    line-height: 1.4;\n    transition: opacity 0.2s;\n}\n.renewal .popup-btn:hover { opacity: 0.85; }\n.renewal .popup-btn-red {\n    background: #e02020;\n    color: #fff;\n}\n.renewal .popup-btn-black {\n    background: #000;\n    color: #fff;\n}\n.renewal .popup-btn .arrow {\n    margin-left: 12px;\n    flex-shrink: 0;\n}\n\n/*@media screen and (min-width: 990px) {\n    .renewal .popup-content { max-width: 460px; }\n}*/\n\n@media screen and (min-width: 769px) {\n.renewal .popup-info-box{padding:30px 0 0;}\n.renewal .popup-desc{margin: 3rem auto 2rem;}\n.renewal .popup-desc br:nth-child(2){display:none;}\n.renewal .logo-sub{font-size: 1.2rem;}\n.renewal .popup-desc,.renewal .popup-btn{font-size: 1.3rem;}\n.renewal .popup-btn-area{padding: 20px 15% 50px;}\n}\n@media screen and (max-width: 768px) {\n    .renewal{margin: 0 5%;}\n}\n</style>",
         "color_scheme": "",
-        "padding_top": 40,
+        "padding_top": 80,
         "padding_bottom": 52
       }
     },

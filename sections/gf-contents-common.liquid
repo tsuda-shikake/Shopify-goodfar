@@ -1,0 +1,271 @@
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 769px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+{%- endstyle -%}
+<div class="contents-common section-{{ section.id }}-padding"{%- if section.settings.pagenav-id != blank -%} id="{{ section.settings.pagenav-id }}"{%- endif -%}>
+  {%- for block in section.blocks -%}
+    {%- case block.type -%} 
+        {%- when 'contents-title' -%}
+      <div class="contents-title">
+        {% if block.settings.contents-subtitle != blank %}<p class="contents-subtitle">{{ block.settings.contents-subtitle }}</p>{% endif %}
+        {{ block.settings.contents-title | newline_to_br }}
+      </div>
+  
+        {%- when 'contents-text' -%}
+        <div class="contents-text">{{ block.settings.contents-text | newline_to_br }}</div>
+
+        {%- when 'contents-text-image' -%}
+        <div class="contents-text-image{% if block.settings.contents-text-image-checkbox == true %} row-reverse{% endif %}">
+          <img src="{{ block.settings.contents-text-image-column1 | img_url: 'original' }}" alt="{{ block.settings.contents-title }}">
+          {{ block.settings.contents-text-image-column2 | newline_to_br }}
+        </div>
+  
+        {%- when 'contents-image' -%}
+        <div class="contents-image" {% unless block.settings.image_bottom == 20 %}style="margin-bottom:{{ block.settings.image_bottom }}px"{% endunless %}>
+          <figure{% if block.settings.contents-image-checkbox == true %} class="contents-image-inner"{% endif %}>
+            <img src="{{ block.settings.contents-image | img_url: 'original' }}" alt="{{ block.settings.contents-title }}"{% if block.settings.contents-image-maxwidth > 0 %} style="max-width:{{ block.settings.contents-image-maxwidth }}px;"{% endif %}>
+            {% if block.settings.contents-image-caption != blank %}<figcaption>{{ block.settings.contents-image-caption }}</figcaption>{% endif %}
+          </figure>
+        </div>
+      
+        {%- when 'contents-image-column' -%}
+        <div class="contents-image-column2">
+          <figure>
+            <img src="{{ block.settings.contents-image-column1 | img_url: 'original' }}" alt="{{ block.settings.contents-title }}">
+            {% if block.settings.contents-image-column1-caption != blank %}<figcaption>{{ block.settings.contents-image-column1-caption }}</figcaption>{% endif %}
+          </figure>
+          <figure>
+            <img src="{{ block.settings.contents-image-column2 | img_url: 'original' }}" alt="{{ block.settings.contents-title }}">
+            {% if block.settings.contents-image-column2-caption != blank %}<figcaption>{{ block.settings.contents-image-column2-caption }}</figcaption>{% endif %}
+          </figure>          
+        </div>
+
+      {%- when 'button' -%}
+      <div class="contents-linkbutton">
+        <a href="{{ block.settings.button-link }}" class="btn__solid">{{ block.settings.button-text }}</a>
+      </div>
+
+      {%- when 'text-link' -%}
+      <div class="contents-textlink">
+        {% if block.settings.text-linkurl1 != blank %}<a href="{{ block.settings.text-linkurl1 }}" class="link--text">{{ block.settings.link-text1 }}</a>{% endif %}
+        {% if block.settings.text-linkurl2 != blank %}<a href="{{ block.settings.text-linkurl2 }}" class="link--text">{{ block.settings.link-text2 }}</a>{% endif %}
+        {% if block.settings.text-linkurl3 != blank %}<a href="{{ block.settings.text-linkurl3 }}" class="link--text">{{ block.settings.link-text3 }}</a>{% endif %}
+      </div>
+  
+      
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "contents-common",
+    "settings": [
+      {
+        "type": "text",
+        "id": "pagenav-id",
+        "label": "ページ内リンク用ID"
+      },      
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 40
+      }       
+    ],
+    "blocks": [
+      {
+        "type": "contents-title",
+        "name": "ブロックタイトル",
+        "settings": [
+          {
+            "type": "text",
+            "id": "contents-subtitle",
+            "default": "ブロックサブタイトル",
+            "label": "ブロックサブタイトル"
+          },          
+          {
+            "type": "richtext",
+            "id": "contents-title",
+            "default": "<h2>ブロックタイトル</h2>",
+            "label": "ブロックタイトル"
+          }     
+        ]
+      },
+      {
+        "type": "contents-text",
+        "name": "ブロックテキスト",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "contents-text",
+            "default": "<p>ブロックテキスト</p>",
+            "label": "ブロックテキスト"
+          }   
+        ]
+      },
+      {
+        "type": "contents-image",
+        "name": "画像",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "contents-image",
+            "label": "画像"
+          },
+          {
+          "type": "text",
+          "id": "contents-image-caption",
+          "label": "画像キャプション"
+          },
+          {
+          "type": "range",
+          "id": "image_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "画像下のスペース（単位：px）",
+          "default": 20
+          },
+          {
+            "type": "number",
+            "id": "contents-image-maxwidth",
+            "label": "画像の最大幅を指定（単位：px）"
+          },
+          {
+            "type": "checkbox",
+            "id": "contents-image-checkbox",
+            "default": false,
+            "label": "コンテンツインナー画像にする"
+          }
+        ]
+      },
+      {
+        "type": "contents-image-column",
+        "name": "画像2カラム",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "contents-image-column1",
+            "label": "画像1"
+          },
+          {
+            "type": "text",
+            "id": "contents-image-column1-caption",
+            "label": "画像1のキャプション"
+          },
+          {
+            "type": "image_picker",
+            "id": "contents-image-column2",
+            "label": "画像2"
+          },
+          {
+            "type": "text",
+            "id": "contents-image-column2-caption",
+            "label": "画像2のキャプション"
+          }
+        ]
+      },
+      {
+        "type": "contents-text-image",
+        "name": "画像とテキスト",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "contents-text-image-column1",
+            "label": "画像1"
+          },
+          {
+            "type": "richtext",
+            "id": "contents-text-image-column2",
+            "default": "<p>テキスト</p>",
+            "label": "テキスト"
+          },
+          {
+            "type": "checkbox",
+            "id": "contents-text-image-checkbox",
+            "default": false,
+            "label": "左右逆表示にする（PCのみ）"
+          }   
+        ]
+      },
+      {
+        "type": "button",
+        "name": "リンクボタン",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "button-text",
+            "label": "ボタンテキスト"
+          },     {
+            "type": "url",
+            "id": "button-link",
+            "label": "ボタンリンク先"
+          }
+        ]
+      },
+      {
+        "type": "text-link",
+        "name": "テキストリンク",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "link-text1",
+            "label": "テキスト1"
+          },
+          {
+            "type": "url",
+            "id": "text-linkurl1",
+            "label": "テキストリンク先1"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "link-text2",
+            "label": "テキスト2"
+          },     {
+            "type": "url",
+            "id": "text-linkurl2",
+            "label": "テキストリンク先2"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "link-text3",
+            "label": "テキスト3"
+          },     {
+            "type": "url",
+            "id": "text-linkurl3",
+            "label": "テキストリンク先3"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contents common"
+      }
+    ]    
+  }
+{% endschema %}

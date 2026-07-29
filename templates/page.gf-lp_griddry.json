@@ -1,0 +1,365 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "gf-lp",
+  "sections": {
+    "gf_lp_header": {
+      "type": "gf-lp-header",
+      "settings": {
+        "logo": "shopify://shop_images/gf-logo_text-bk.svg",
+        "logo_link": "/",
+        "button_text": "ご購入はこちら",
+        "button_link": "/collections/grid-dry"
+      }
+    },
+    "gf_mainvisual_QbDRrV": {
+      "type": "gf-mainvisual",
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.gf-mainvisual__text {bottom: 25%; width: 100%; }}"
+      ],
+      "name": "GF メインビジュアル",
+      "settings": {
+        "image_pc": "shopify://shop_images/lp-main_grid-dry_pc.jpg",
+        "image_sp": "shopify://shop_images/lp-main_grid-dry_sp.jpg",
+        "text": "<p><strong>GRID-DRY</strong></p>",
+        "text_position_pc": "center-left",
+        "text_position_sp": "bottom-center",
+        "text_font": "noto_sans_japanese_n4",
+        "text_color_pc": "#000000",
+        "text_color_sp": "#ffffff",
+        "text_font_size_pc": 50,
+        "text_font_size_sp": 40,
+        "logo_position_pc": "top-right",
+        "logo_position_sp": "top-right",
+        "logo_width_pc": 120,
+        "logo_width_sp": 80,
+        "link": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_gd_intro": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>山が近くなるベースレイヤー</strong></h2>"
+          }
+        },
+        "contents_text_gd_intro": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>GOOD FARは、「必要な機能にフォーカスし、価格妥当性を追求した商品を開発する」というミッションのもと、ハイキングやトレッキング、渓流釣り、トレランなどのアクティビティに向けたベースレイヤーを研究開発。<br/>高性能で価格の高いアウトドアインナーの中で、機能と価格がフィットするアイテムを生み出します。<br/>「よりアクティビティを楽しんでもらいたい。」そんな想いから着想したベースレイヤーです。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_gd_intro",
+        "contents_text_gd_intro"
+      ],
+      "custom_css": [
+        "h2 {text-align: center; margin-bottom: 5rem; letter-spacing: 0.15em;}"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
+    "gf_contents_common_gd_01": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_gd_01": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h3><strong>汗抜けに特化すること</strong></h3>"
+          }
+        },
+        "contents_image_gd_01": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/P7A3342.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_gd_01": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>まず、一番下に着る肌に密着するベースレイヤーは、汗抜けに特化すること。行動中に汗を吸いすぎたシャツは、不快感だけでなく汗冷えの原因になります。春夏はもちろん秋冬でも同じことが言えます。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_gd_01",
+        "contents_image_gd_01",
+        "contents_text_gd_01"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_gd_02": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_gd_02": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h3><strong>価格妥当性を追求。スリーブレスは¥3,600（税抜）。</strong></h3>"
+          }
+        },
+        "contents_image_gd_02": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/GDF.png",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_gd_02": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>GRID-DRYは、軽量と汗抜けに特化し、不要な装飾などを外しミニマルなデザインにすることで、価格妥当性を追求しました。これからアウトドアアクティビティを始めたい人も、複数枚持ってアウトドアアクティビティに望む人にも手を伸ばしやすい価格帯を実現しました。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_gd_02",
+        "contents_image_gd_02",
+        "contents_text_gd_02"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_gd_03": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_gd_03": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h3><strong>サムホール&ウォッチホール</strong></h3>"
+          }
+        },
+        "contents_image_gd_03": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/P7A2900.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_gd_03": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>ロングスリーブはサムホール、ウォッチホールがついて手の甲まで隠れるので、秋冬はもちろん夏の日焼け対策にも活用いただけます。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_gd_03",
+        "contents_image_gd_03",
+        "contents_text_gd_03"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_gd_04": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_gd_04": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h3><strong>1サイズ上を選べばアクティビティ時のアウターとして使える</strong></h3>"
+          }
+        },
+        "contents_image_gd_04": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/06250306.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_gd_04": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>ランニングなどでは、インナーで使われるサイズより1サイズから2サイズアップするとアウターとしてもお使いいただけます。ユニセックスでXから2XLまで展開しています。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_gd_04",
+        "contents_image_gd_04",
+        "contents_text_gd_04"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "gf_contents_common_J6exRB": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "button_Hwttrn": {
+          "type": "button",
+          "settings": {
+            "button-text": "商品はこちら",
+            "button-link": "shopify://collections/grid-dry"
+          }
+        }
+      },
+      "block_order": [
+        "button_Hwttrn"
+      ],
+      "disabled": true,
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_product_list_manual_CdakDd": {
+      "type": "gf-product-list-manual",
+      "blocks": {
+        "product_cc9njF": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_silvergray_b518ba10-547d-49fc-a51c-62faed17d520.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_silvergray.png",
+            "title": "GRID-DRY SLEEVE LESS",
+            "url": "/products/gdf1gd00"
+          }
+        },
+        "product_XAnpCd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD04_front_silvergray.png",
+            "image_hover": "shopify://shop_images/GDF1GD04_back_silvergray.png",
+            "title": "GRID-DRY LONG SLEEVE",
+            "url": "shopify://products/gdf1gd04"
+          }
+        },
+        "product_r3Aa8g": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_black.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_black.png",
+            "title": "GRID-DRY SLEEVE LESS",
+            "url": "/products/gdf1gd00?variant=53564117582103"
+          }
+        },
+        "product_UiTeJh": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD04_front_black.png",
+            "image_hover": "shopify://shop_images/GDF1GD04_back_black.png",
+            "title": "GRID-DRY LONG SLEEVE",
+            "url": "/products/gdf1gd04?variant=53563904196887"
+          }
+        },
+        "product_QzBgR9": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_lightpurple.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_lightpurple.png",
+            "title": "JERRY鵜飼別注色 GRID-DRY SLEEVE LESS",
+            "url": "/products/gdf1gd00?variant=53564117680407"
+          }
+        },
+        "product_xxjdD6": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD04_front_lightpurple.png",
+            "image_hover": "shopify://shop_images/GDF1GD04_back_lightpurple.png",
+            "title": "JERRY鵜飼別注色 GRID-DRY LONG SLEEVE",
+            "url": "/products/gdf1gd04?variant=53563904295191"
+          }
+        },
+        "product_bUk4MM": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_sagegreen.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_sagegreen.png",
+            "title": "山歩きJP別注色 GRID-DRY SLEEVE LESS",
+            "url": "/products/gdf1gd00?variant=53564117647639"
+          }
+        },
+        "product_BrHRqR": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF_FRON.png",
+            "image_hover": "shopify://shop_images/GDF_back_sagegreen.png",
+            "title": "山歩きJP別注色 GRID-DRY LONG SLEEVE",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_cc9njF",
+        "product_XAnpCd",
+        "product_r3Aa8g",
+        "product_UiTeJh",
+        "product_QzBgR9",
+        "product_xxjdD6",
+        "product_bUk4MM",
+        "product_BrHRqR"
+      ],
+      "custom_css": [
+        "h2 {text-align: center; font-weight: bold;}",
+        "@media screen and (min-width: 750px) {.page-width {max-width: 64rem; padding-left: 0; padding-right: 0; }}"
+      ],
+      "name": "Product List Manual",
+      "settings": {
+        "heading": "Product",
+        "enable_image_hover": true,
+        "columns_desktop": 2,
+        "columns_mobile": 2,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "gf_lp_header",
+    "gf_mainvisual_QbDRrV",
+    "main",
+    "gf_contents_common_gd_01",
+    "gf_contents_common_gd_02",
+    "gf_contents_common_gd_03",
+    "gf_contents_common_gd_04",
+    "gf_contents_common_J6exRB",
+    "gf_product_list_manual_CdakDd"
+  ]
+}

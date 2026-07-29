@@ -1,0 +1,199 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+
+  /* カラム数（PC / SP） */
+  .productList-list-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+    row-gap: 3rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .productList-list-{{ section.id }} {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    }
+  }
+
+  /* 商品カード */
+  .card-product-manual {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .card-product-manual__media {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  .card-product-manual__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .card-product-manual__image--secondary {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* マウスオーバーで画像を切替（enable_image_hover がONかつ各ブロックにimage_hoverが設定されている場合のみ付与） */
+  .card-product-manual--hover:hover .card-product-manual__image--secondary {
+    opacity: 1;
+  }
+
+  .card-product-manual__title {
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+{% endstyle %}
+
+<div class="contents section-{{ section.id }}-padding contents-{{ section.id }} page-width">
+  {%- if section.settings.heading != blank -%}
+    <h2 class="heading productList-heading">{{ section.settings.heading }}</h2>
+  {%- endif -%}
+
+  <div class="productList-container">
+    <div class="grid productList-list productList-list-{{ section.id }}">
+      {%- for block in section.blocks -%}
+        <div class="productList-item" {{ block.shopify_attributes }}>
+          {% render 'gf-card-product-manual',
+            image: block.settings.image,
+            image_hover: block.settings.image_hover,
+            title: block.settings.title,
+            url: block.settings.url,
+            enable_image_hover: section.settings.enable_image_hover
+          %}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product List Manual",
+  "class": "productList",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "見出し"
+    },
+    {
+      "type": "header",
+      "content": "商品カードの表示設定"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_image_hover",
+      "label": "マウスオーバーで画像を切り替える",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "カラム数"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "PC表示カラム数",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "SP表示カラム数",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "余白"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "name": "商品",
+      "type": "product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "画像（メイン）"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_hover",
+          "label": "画像（マウスオーバー用・任意）",
+          "info": "未設定の場合はマウスオーバーしてもメイン画像のままです"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "商品名"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "リンク先URL",
+          "info": "バリエーションカラーごとのURLなどを指定できます"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product List Manual",
+      "blocks": [
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %}

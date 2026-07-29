@@ -1,0 +1,270 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 769px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .gf-mainvisual-{{ section.id }} .gf-mainvisual__text {
+    font-family: {{ section.settings.text_font.family }}, {{ section.settings.text_font.fallback_families }};
+    font-style: {{ section.settings.text_font.style }};
+    font-weight: {{ section.settings.text_font.weight }};
+  }
+  {{ section.settings.text_font | font_face }}
+{%- endstyle -%}
+
+{%- liquid
+  assign has_link = false
+  if section.settings.link != blank
+    assign has_link = true
+  endif
+-%}
+
+<section class="gf-mainvisual gf-mainvisual-{{ section.id }} section-{{ section.id }}-padding">
+  {%- if has_link -%}<a href="{{ section.settings.link }}" class="gf-mainvisual__link">{%- endif -%}
+  <div class="gf-mainvisual__media">
+    <picture>
+      {%- if section.settings.image_pc != blank -%}
+        <source srcset="{{ section.settings.image_pc | img_url: '1920x' }}" media="(min-width: 769px)">
+      {%- endif -%}
+      {%- if section.settings.image_sp != blank -%}
+        <img src="{{ section.settings.image_sp | img_url: '768x' }}" alt="{{ section.settings.image_sp.alt | default: section.settings.image_pc.alt | escape }}" loading="lazy">
+      {%- elsif section.settings.image_pc != blank -%}
+        <img src="{{ section.settings.image_pc | img_url: '1920x' }}" alt="{{ section.settings.image_pc.alt | escape }}" loading="lazy">
+      {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+      {%- endif -%}
+    </picture>
+  </div>
+
+  <div class="gf-mainvisual__overlay">
+    {%- if section.settings.logo != blank -%}
+      <div
+        class="gf-mainvisual__logo gf-mainvisual__logo--sp-{{ section.settings.logo_position_sp }} gf-mainvisual__logo--pc-{{ section.settings.logo_position_pc }}"
+        style="--gf-mainvisual-logo-width-sp: {{ section.settings.logo_width_sp }}px; --gf-mainvisual-logo-width-pc: {{ section.settings.logo_width_pc }}px;"
+      >
+        <img src="{{ section.settings.logo | img_url }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.text != blank -%}
+      <div
+        class="gf-mainvisual__text gf-mainvisual__text--sp-{{ section.settings.text_position_sp }} gf-mainvisual__text--pc-{{ section.settings.text_position_pc }}"
+        style="--gf-mainvisual-text-fs-sp: {{ section.settings.text_font_size_sp }}px; --gf-mainvisual-text-fs-pc: {{ section.settings.text_font_size_pc }}px;{% if section.settings.text_color_sp != blank %} --gf-mainvisual-text-color-sp: {{ section.settings.text_color_sp }};{% endif %}{% if section.settings.text_color_pc != blank %} --gf-mainvisual-text-color-pc: {{ section.settings.text_color_pc }};{% endif %}"
+      >
+        {{ section.settings.text }}
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if has_link -%}</a>{%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "GF メインビジュアル",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "画像"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_pc",
+      "label": "画像（PC）"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_sp",
+      "label": "画像（SP）",
+      "info": "未設定の場合はPC画像を使用します"
+    },
+    {
+      "type": "header",
+      "content": "テキスト"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "テキスト"
+    },
+    {
+      "type": "select",
+      "id": "text_position_pc",
+      "label": "テキストの表示位置（PC）",
+      "default": "center-center",
+      "options": [
+        { "value": "top-left", "label": "上・左" },
+        { "value": "top-center", "label": "上・中央" },
+        { "value": "top-right", "label": "上・右" },
+        { "value": "center-left", "label": "中央・左" },
+        { "value": "center-center", "label": "中央・中央" },
+        { "value": "center-right", "label": "中央・右" },
+        { "value": "bottom-left", "label": "下・左" },
+        { "value": "bottom-center", "label": "下・中央" },
+        { "value": "bottom-right", "label": "下・右" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_position_sp",
+      "label": "テキストの表示位置（SP）",
+      "default": "center-center",
+      "options": [
+        { "value": "top-left", "label": "上・左" },
+        { "value": "top-center", "label": "上・中央" },
+        { "value": "top-right", "label": "上・右" },
+        { "value": "center-left", "label": "中央・左" },
+        { "value": "center-center", "label": "中央・中央" },
+        { "value": "center-right", "label": "中央・右" },
+        { "value": "bottom-left", "label": "下・左" },
+        { "value": "bottom-center", "label": "下・中央" },
+        { "value": "bottom-right", "label": "下・右" }
+      ]
+    },
+    {
+      "type": "font_picker",
+      "id": "text_font",
+      "label": "テキストのフォント",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "color",
+      "id": "text_color_pc",
+      "label": "テキストの色（PC）"
+    },
+    {
+      "type": "color",
+      "id": "text_color_sp",
+      "label": "テキストの色（SP）"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size_pc",
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "テキストの文字サイズ（PC）",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_font_size_sp",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "テキストの文字サイズ（SP）",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "ロゴ"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "ロゴ画像"
+    },
+    {
+      "type": "select",
+      "id": "logo_position_pc",
+      "label": "ロゴの表示位置（PC）",
+      "default": "top-center",
+      "options": [
+        { "value": "top-left", "label": "上・左" },
+        { "value": "top-center", "label": "上・中央" },
+        { "value": "top-right", "label": "上・右" },
+        { "value": "center-left", "label": "中央・左" },
+        { "value": "center-center", "label": "中央・中央" },
+        { "value": "center-right", "label": "中央・右" },
+        { "value": "bottom-left", "label": "下・左" },
+        { "value": "bottom-center", "label": "下・中央" },
+        { "value": "bottom-right", "label": "下・右" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "logo_position_sp",
+      "label": "ロゴの表示位置（SP）",
+      "default": "top-center",
+      "options": [
+        { "value": "top-left", "label": "上・左" },
+        { "value": "top-center", "label": "上・中央" },
+        { "value": "top-right", "label": "上・右" },
+        { "value": "center-left", "label": "中央・左" },
+        { "value": "center-center", "label": "中央・中央" },
+        { "value": "center-right", "label": "中央・右" },
+        { "value": "bottom-left", "label": "下・左" },
+        { "value": "bottom-center", "label": "下・中央" },
+        { "value": "bottom-right", "label": "下・右" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "logo_width_pc",
+      "min": 40,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "ロゴの幅（PC）",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "logo_width_sp",
+      "min": 40,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "ロゴの幅（SP）",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "リンク"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "リンク先",
+      "info": "設定するとメインビジュアル全体がリンクになります"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "GF メインビジュアル"
+    }
+  ]
+}
+{% endschema %}

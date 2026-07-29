@@ -19,6 +19,34 @@
         "sp_image": "shopify://shop_images/GF_mv_sp.png"
       }
     },
+    "rich_text_e9apef": {
+      "type": "rich-text",
+      "blocks": {
+        "text_6TpPf7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"/blogs/topics/0729info\" title=\"熊本地震による被害についてのお見舞いと、配送への影響について\">熊本地震による被害についてのお見舞いと、配送への影響について</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_6TpPf7"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {max-width: 562px;}",
+        "h2 {text-align: center; margin-bottom: 2em; font-family: serif; letter-spacing: 0.05em;}",
+        "p {font-size: 13px; letter-spacing: 1.17px;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "gf_banner_yhbWkC": {
       "type": "gf-banner",
       "blocks": {
@@ -281,6 +309,24 @@
             "url": "/products/gdf1gd04"
           }
         },
+        "product_m6Hx9G": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD00_front_black.png",
+            "image_hover": "shopify://shop_images/GDF1GD00_back_black.png",
+            "title": "GRID-DRY SLEEVE LESS",
+            "url": "/products/gdf1gd00?variant=53564117582103"
+          }
+        },
+        "product_VFidqT": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1GD04_front_black.png",
+            "image_hover": "shopify://shop_images/GDF1GD04_back_black.png",
+            "title": "GRID-DRY LONG SLEEVE",
+            "url": "/products/gdf1gd04?variant=53563904196887"
+          }
+        },
         "product_LLkL6E": {
           "type": "product",
           "settings": {
@@ -323,12 +369,13 @@
         "product_QfCiVw",
         "product_f9ybFc",
         "product_bjMpJ6",
+        "product_m6Hx9G",
+        "product_VFidqT",
         "product_LLkL6E",
         "product_KPnXhR",
         "product_CVXrL4",
         "product_dJWkk9"
       ],
-      "disabled": true,
       "custom_css": [
         ".page-width {max-width: 810px;}"
       ],
@@ -354,6 +401,7 @@
     },
     "custom_liquid_9tzrfB": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div id=\"entrance-popup\" style=\"display:none;\">\n  <div class=\"popup-overlay\"> </div>\n\n  <div class=\"popup-content\">\n    <a href=\"#\" class=\"popup-close\"><img src=\"https://cdn.shopify.com/s/files/1/0942/4456/9367/files/btn-close.svg?v=1772516591\" alt=\"閉じる\"></a>\n\n    <div class=\"popup-card\">\n\n        <div class=\"popup-info-box\">\n            <div class=\"popup-logo-row\">\n              <span class=\"logo-bvd\"><img src=\"https://cdn.shopify.com/s/files/1/0942/4456/9367/files/logo_ex.png?v=1771395332\" alt=\"B.V.D.\"></span>\n              <span class=\"logo-sub\">OFFICIAL EXCLUSIVE<br>ONLINE STORE</span>\n            </div>\n            <p class=\"popup-desc\">\n              GOOD FAR 新ブランドの立ち上げに伴う、<br>\n              サイトリニューアルおよび取り扱いブランド<br>\n              変更のお知らせ\n            </p>\n        </div>\n\n\n      <div class=\"popup-btn-area\">\n        <a href=\"https://goodfar.jp/pages/exclusive-renewal\" class=\"popup-btn popup-btn-red\">\n          <span>お知らせはこちら</span><span class=\"arrow\">→</span>\n        </a>\n        <a href=\"https://goodfar.jp/\" class=\"popup-btn popup-btn-black\">\n          <span>GOOD FAR OFFICIAL WEBはこちら</span><span class=\"arrow\">→</span>\n        </a>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n<style>\n#entrance-popup {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 99999;\n}\n.popup-overlay {\n    position: absolute;\n    top: 0; left: 0;\n    background: rgba(0,0,0,0.3);\n    width: 100%;\n    height: 100%;\n}\n.popup-content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    z-index: 100000;\n    min-width: 320px;\n    max-width: 420px;\n    width: 88%;\n    max-height: 90vh;\n    overflow-y: auto;\n}\n.popup-close {\n    position: absolute;\n    top: -38px;\n    right: 0;\n    z-index: 100001;\n    display: inline-block;\n}\n.popup-close img {\n    width: 28px;\n    height: 28px;\n    display: block;\n}\n\n.popup-card {\n    background: rgba(255,255,255,0.9); \n    overflow: hidden;\n    box-shadow: 0 10px 40px rgba(0,0,0,0.3);\n}\n\n.popup-info-box {\n    width: 100%;\n    padding: 30px 24px 0;\n    box-sizing: border-box;\n}\n\n.popup-logo-row {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 14px;\n    margin-bottom: 16px;\n}\n.logo-bvd{\n    max-width: 100px;\n    width: 25%;\n}\n.logo-bvd img{\n    width: 100%;\n    height: auto;\n}\n.logo-sub {\n    font-weight: 700;\n    font-size: 0.92rem;\n    line-height: 1.35;\n    color: #111;\n    letter-spacing: 0.3px;\n}\n\n.popup-desc {\n    margin: 0;\n    font-size: 1.2rem;\n    line-height: 2;\n    color: #111;\n    font-weight: 500;\n}\n\n.popup-btn-area {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    padding: 20px 24px 26px;\n    box-sizing: border-box;\n}\n.popup-btn {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    text-decoration: none;\n    padding: 1.1rem 1.4rem;\n    font-size: 1.2rem;\n    line-height: 1.4;\n    transition: opacity 0.2s;\n}\n.popup-btn:hover { opacity: 0.85; }\n.popup-btn-red {\n    background: #e02020;\n    color: #fff;\n}\n.popup-btn-black {\n    background: #000;\n    color: #fff;\n}\n.popup-btn .arrow {\n    margin-left: 12px;\n    flex-shrink: 0;\n}\n\n/*@media screen and (min-width: 990px) {\n    .popup-content { max-width: 460px; }\n}*/\n\n@media screen and (min-width: 768px) {\n.popup-info-box{padding:30px 15% 0;}\n.logo-sub{font-size: 1.2rem;}\n.popup-desc,.popup-btn{font-size: 1.3rem;}\n.popup-btn-area{padding: 20px 15% 30px;}\n}\n</style>\n\n<script>\nwindow.addEventListener('DOMContentLoaded', function() {\n    if (window.jQuery) {\n        (function($) {\n            $(function() {\n                // クッキーを確認する関数\n                function getCookie(name) {\n                    var value = \"; \" + document.cookie;\n                    var parts = value.split(\"; \" + name + \"=\");\n                    if (parts.length == 2) return parts.pop().split(\";\").shift();\n                }\n                // 「popup_shown」というクッキーがなければ表示\n                if (!getCookie('popup_shown')) {\n                    $('#entrance-popup').fadeIn(500);\n                }\n                // クッキーをセットする関数（ブラウザを閉じると無効になる設定）\n                function setPopupCookie() {\n                    document.cookie = \"popup_shown=true; path=/\";\n                }\n                // 1. ボタンをクリックした時（リンク遷移はそのまま許可しつつクッキーをセット）\n                $('.popup-btn').on('click', function() {\n                    setPopupCookie();\n                });\n                // 2. ×ボタン、または背景をクリックした時\n                $('.popup-close, .popup-overlay').on('click', function(e) {\n                    e.preventDefault();\n                    setPopupCookie();\n                    $('#entrance-popup').fadeOut(300);\n                });\n            });\n        })(jQuery);\n    }\n});\n</script>",
@@ -365,6 +413,7 @@
   },
   "order": [
     "gf_top_mv_CK6GLL",
+    "rich_text_e9apef",
     "gf_banner_yhbWkC",
     "gf_banner_WgdQyk",
     "gf_banner_yAaUF7",

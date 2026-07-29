@@ -1,0 +1,52 @@
+<header class="gf-lp-header">
+  <div class="gf-lp-header__inner">
+    <a href="{{ section.settings.logo_link | default: routes.root_url }}" class="gf-lp-header__logo">
+      {%- if section.settings.logo != blank -%}
+        <img src="{{ section.settings.logo | img_url }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+      {%- elsif settings.logo != blank -%}
+        <img src="{{ settings.logo | img_url }}" alt="{{ settings.logo.alt | default: shop.name | escape }}">
+      {%- else -%}
+        {{ shop.name }}
+      {%- endif -%}
+    </a>
+    {%- if section.settings.button_link != blank -%}
+      <a href="{{ section.settings.button_link }}" class="gf-lp-header__btn">{{ section.settings.button_text }}</a>
+    {%- endif -%}
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "LP header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "ロゴ画像",
+      "info": "未設定の場合はテーマ設定のロゴを使用します"
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "ロゴのリンク先",
+      "info": "未設定の場合はトップページ"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "ボタンテキスト",
+      "default": "ご購入はこちら"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "ボタンのリンク先"
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP header"
+    }
+  ]
+}
+{% endschema %}

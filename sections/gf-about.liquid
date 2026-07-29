@@ -1,0 +1,50 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.mainvisual{
+    max-width: 980px;
+    margin: 0 auto 5rem;
+    text-align: center;
+}
+.mainvisual img{
+    max-width:700px;
+    width:80%;
+}
+
+{%- endstyle -%}
+
+<div class="mainvisual">
+  <picture>
+    <source srcset="{{ section.settings.image-pc | img_url: "1920x" }}" alt="{{ section.settings.image-pc.alt | escape }}" media="(min-width: 769px)">
+    <img src="{{ section.settings.image-sp | img_url: "768x" }}" alt="{{ section.settings.image-sp.alt | escape }}" />
+  </picture>
+</div>
+<div class="contents-width page-width page-width--narrow">
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content }}
+  </div>
+  <!--<div class="linkbtn linkbtn-arrow">
+    <div class="linkbtn--item"><a href="https://www.bvd.jp/" target="_blank">ブランドサイトはこちら</a></div>
+    <div class="linkbtn--item"><a href="https://store.fujibo-ap.jp/" target="_blank">インナーアイテムはこちら</a></div>
+  </div>-->
+</div>
+
+{% schema %}
+{
+  "name": "About",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image-pc",
+      "label": "画像PC"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-sp",
+      "label": "画像SP"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,452 @@
+{{ 'gf-lp.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign eyebrow_color_pc = section.settings.eyebrow_color_pc | default: '#ffffff'
+  assign eyebrow_color_sp = section.settings.eyebrow_color_sp | default: '#ffffff'
+  assign title_color_pc = section.settings.title_color_pc | default: '#ffffff'
+  assign title_color_sp = section.settings.title_color_sp | default: '#ffffff'
+  assign aspect_ratio_pc = section.settings.aspect_ratio_pc | default: '21 / 9'
+  assign aspect_ratio_sp = section.settings.aspect_ratio_sp | default: '4 / 5'
+
+  assign position_pc = section.settings.text_position_pc
+  case position_pc
+    when 'top-left'
+      assign justify_pc = 'flex-start'
+      assign align_pc = 'flex-start'
+      assign text_align_pc = 'left'
+    when 'top-center'
+      assign justify_pc = 'flex-start'
+      assign align_pc = 'center'
+      assign text_align_pc = 'center'
+    when 'top-right'
+      assign justify_pc = 'flex-start'
+      assign align_pc = 'flex-end'
+      assign text_align_pc = 'right'
+    when 'middle-left'
+      assign justify_pc = 'center'
+      assign align_pc = 'flex-start'
+      assign text_align_pc = 'left'
+    when 'middle-center'
+      assign justify_pc = 'center'
+      assign align_pc = 'center'
+      assign text_align_pc = 'center'
+    when 'middle-right'
+      assign justify_pc = 'center'
+      assign align_pc = 'flex-end'
+      assign text_align_pc = 'right'
+    when 'bottom-left'
+      assign justify_pc = 'flex-end'
+      assign align_pc = 'flex-start'
+      assign text_align_pc = 'left'
+    when 'bottom-right'
+      assign justify_pc = 'flex-end'
+      assign align_pc = 'flex-end'
+      assign text_align_pc = 'right'
+    else
+      assign justify_pc = 'flex-end'
+      assign align_pc = 'center'
+      assign text_align_pc = 'center'
+  endcase
+
+  assign position_sp = section.settings.text_position_sp
+  case position_sp
+    when 'top-left'
+      assign justify_sp = 'flex-start'
+      assign align_sp = 'flex-start'
+      assign text_align_sp = 'left'
+    when 'top-center'
+      assign justify_sp = 'flex-start'
+      assign align_sp = 'center'
+      assign text_align_sp = 'center'
+    when 'top-right'
+      assign justify_sp = 'flex-start'
+      assign align_sp = 'flex-end'
+      assign text_align_sp = 'right'
+    when 'middle-left'
+      assign justify_sp = 'center'
+      assign align_sp = 'flex-start'
+      assign text_align_sp = 'left'
+    when 'middle-center'
+      assign justify_sp = 'center'
+      assign align_sp = 'center'
+      assign text_align_sp = 'center'
+    when 'middle-right'
+      assign justify_sp = 'center'
+      assign align_sp = 'flex-end'
+      assign text_align_sp = 'right'
+    when 'bottom-left'
+      assign justify_sp = 'flex-end'
+      assign align_sp = 'flex-start'
+      assign text_align_sp = 'left'
+    when 'bottom-right'
+      assign justify_sp = 'flex-end'
+      assign align_sp = 'flex-end'
+      assign text_align_sp = 'right'
+    else
+      assign justify_sp = 'flex-end'
+      assign align_sp = 'center'
+      assign text_align_sp = 'center'
+  endcase
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #LpHero-{{ section.id }} {
+    --lp-hero-ratio: {{ aspect_ratio_sp }};
+    --lp-hero-eyebrow-color: {{ eyebrow_color_sp }};
+    --lp-hero-eyebrow-size: {{ section.settings.eyebrow_font_size_sp | default: 13 }}px;
+    --lp-hero-title-color: {{ title_color_sp }};
+    --lp-hero-title-size: {{ section.settings.title_font_size_sp | default: 32 }}px;
+    --lp-hero-justify: {{ justify_sp }};
+    --lp-hero-align: {{ align_sp }};
+    --lp-hero-text-align: {{ text_align_sp }};
+    --lp-hero-lead-size: {{ section.settings.lead_font_size_sp | default: 15 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #LpHero-{{ section.id }} {
+      --lp-hero-ratio: {{ aspect_ratio_pc }};
+      --lp-hero-eyebrow-color: {{ eyebrow_color_pc }};
+      --lp-hero-eyebrow-size: {{ section.settings.eyebrow_font_size_pc | default: 16 }}px;
+      --lp-hero-title-color: {{ title_color_pc }};
+      --lp-hero-title-size: {{ section.settings.title_font_size_pc | default: 56 }}px;
+      --lp-hero-justify: {{ justify_pc }};
+      --lp-hero-align: {{ align_pc }};
+      --lp-hero-text-align: {{ text_align_pc }};
+      --lp-hero-lead-size: {{ section.settings.lead_font_size_pc | default: 18 }}px;
+    }
+  }
+
+  #LpHero-{{ section.id }} .lp-hero__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: var(--lp-hero-ratio);
+  }
+  #LpHero-{{ section.id }} .lp-hero__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  #LpHero-{{ section.id }} .lp-hero__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 3rem 2rem;
+    justify-content: var(--lp-hero-justify);
+    align-items: var(--lp-hero-align);
+    text-align: var(--lp-hero-text-align);
+  }
+  #LpHero-{{ section.id }} .lp-hero__eyebrow {
+    margin: 0;
+    color: var(--lp-hero-eyebrow-color);
+    font-size: var(--lp-hero-eyebrow-size);
+    letter-spacing: 0.15em;
+  }
+  #LpHero-{{ section.id }} .lp-hero__title {
+    margin: 0;
+    color: var(--lp-hero-title-color);
+    font-size: var(--lp-hero-title-size);
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+  }
+  #LpHero-{{ section.id }} .lp-hero__lead {
+    margin: 2rem auto 0;
+    max-width: 56rem;
+    padding: 0 1.5rem;
+    text-align: {{ section.settings.lead_text_align | default: 'center' }};
+    font-size: var(--lp-hero-lead-size);
+    line-height: 2;
+    {%- if section.settings.lead_color != blank %}
+      color: {{ section.settings.lead_color }};
+    {%- endif %}
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div id="LpHero-{{ section.id }}" class="lp-hero section-{{ section.id }}-padding">
+    {%- if section.settings.image_pc != blank or section.settings.image_sp != blank -%}
+      <div class="lp-hero__media">
+        <picture>
+          {%- if section.settings.image_pc != blank -%}
+            <source srcset="{{ section.settings.image_pc | img_url: '1920x' }}" media="(min-width: 750px)">
+          {%- endif -%}
+          {%- if section.settings.image_sp != blank -%}
+            <img src="{{ section.settings.image_sp | img_url: '750x' }}" alt="{{ section.settings.image_sp.alt | escape }}" loading="eager" width="{{ section.settings.image_sp.width }}" height="{{ section.settings.image_sp.height }}">
+          {%- elsif section.settings.image_pc != blank -%}
+            <img src="{{ section.settings.image_pc | img_url: '1920x' }}" alt="{{ section.settings.image_pc.alt | escape }}" loading="eager" width="{{ section.settings.image_pc.width }}" height="{{ section.settings.image_pc.height }}">
+          {%- endif -%}
+        </picture>
+
+        {%- if section.settings.eyebrow != blank or section.settings.title != blank -%}
+          <div class="lp-hero__overlay{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {%- if section.settings.eyebrow != blank -%}
+              <span class="lp-hero__eyebrow">{{ section.settings.eyebrow }}</span>
+            {%- endif -%}
+            {%- if section.settings.title != blank -%}
+              <h1 class="lp-hero__title inline-richtext">{{ section.settings.title }}</h1>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.lead != blank -%}
+      <div class="lp-hero__lead rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.lead }}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "GF LP Mainvisual",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "画像"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_pc",
+      "label": "画像（PC）"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_sp",
+      "label": "画像（スマホ）"
+    },
+    {
+      "type": "text",
+      "id": "aspect_ratio_pc",
+      "label": "縦横比（PC）",
+      "info": "CSSのaspect-ratio値で指定します。例: 21 / 9",
+      "default": "21 / 9"
+    },
+    {
+      "type": "text",
+      "id": "aspect_ratio_sp",
+      "label": "縦横比（スマホ）",
+      "info": "CSSのaspect-ratio値で指定します。例: 4 / 5",
+      "default": "4 / 5"
+    },
+    {
+      "type": "header",
+      "content": "小見出し・タイトル"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "小見出し",
+      "default": "小見出しテキスト"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "タイトル",
+      "default": "タイトルテキスト"
+    },
+    {
+      "type": "select",
+      "id": "text_position_pc",
+      "label": "表示位置（PC）",
+      "options": [
+        { "value": "top-left", "label": "上揃え・左" },
+        { "value": "top-center", "label": "上揃え・中央" },
+        { "value": "top-right", "label": "上揃え・右" },
+        { "value": "middle-left", "label": "中央揃え・左" },
+        { "value": "middle-center", "label": "中央揃え・中央" },
+        { "value": "middle-right", "label": "中央揃え・右" },
+        { "value": "bottom-left", "label": "下揃え・左" },
+        { "value": "bottom-center", "label": "下揃え・中央" },
+        { "value": "bottom-right", "label": "下揃え・右" }
+      ],
+      "default": "bottom-center"
+    },
+    {
+      "type": "select",
+      "id": "text_position_sp",
+      "label": "表示位置（スマホ）",
+      "options": [
+        { "value": "top-left", "label": "上揃え・左" },
+        { "value": "top-center", "label": "上揃え・中央" },
+        { "value": "top-right", "label": "上揃え・右" },
+        { "value": "middle-left", "label": "中央揃え・左" },
+        { "value": "middle-center", "label": "中央揃え・中央" },
+        { "value": "middle-right", "label": "中央揃え・右" },
+        { "value": "bottom-left", "label": "下揃え・左" },
+        { "value": "bottom-center", "label": "下揃え・中央" },
+        { "value": "bottom-right", "label": "下揃え・右" }
+      ],
+      "default": "bottom-center"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_font_size_pc",
+      "label": "小見出し フォントサイズ（PC）",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_font_size_sp",
+      "label": "小見出し フォントサイズ（スマホ）",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color_pc",
+      "label": "小見出し 文字色（PC）",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color_sp",
+      "label": "小見出し 文字色（スマホ）",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size_pc",
+      "label": "タイトル フォントサイズ（PC）",
+      "min": 24,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "title_font_size_sp",
+      "label": "タイトル フォントサイズ（スマホ）",
+      "min": 18,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "title_color_pc",
+      "label": "タイトル 文字色（PC）",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color_sp",
+      "label": "タイトル 文字色（スマホ）",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "リード文"
+    },
+    {
+      "type": "richtext",
+      "id": "lead",
+      "label": "リード文",
+      "default": "<p>リード文が入ります。</p>"
+    },
+    {
+      "type": "range",
+      "id": "lead_font_size_pc",
+      "label": "リード文 フォントサイズ（PC）",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "lead_font_size_sp",
+      "label": "リード文 フォントサイズ（スマホ）",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "lead_color",
+      "label": "リード文 文字色（PC/SP共通）"
+    },
+    {
+      "type": "select",
+      "id": "lead_text_align",
+      "label": "リード文 テキスト配置",
+      "options": [
+        { "value": "left", "label": "左揃え" },
+        { "value": "center", "label": "中央揃え" },
+        { "value": "right", "label": "右揃え" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "全体設定"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "GF LP Mainvisual"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,221 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "gf-about",
+      "custom_css": [
+        ".mainvisual {margin-top: 5rem;}"
+      ],
+      "settings": {
+        "image-pc": "shopify://shop_images/gf-logo.svg",
+        "image-sp": "shopify://shop_images/gf-logo.svg"
+      }
+    },
+    "gf_contents_common_pN4hKn": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_TKcpJP": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>a little farther, a lot better</strong></h2>"
+          }
+        },
+        "contents_text_m7wiE7": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>もう少し遠くへ行けば、もっと良い体験や風景が待っている。</p><p>GOOD FARは、ハイキング、キャンプ、ランニング、バイクなど、アウトドアフィールドで新しい体験に挑むプレイヤーを応援する、ベースレイヤーを主体としたアパレルブランドです。</p>"
+          }
+        },
+        "contents_image_DUMhr3": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/P7A2717.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 0,
+            "contents-image-checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_TKcpJP",
+        "contents_text_m7wiE7",
+        "contents_image_DUMhr3"
+      ],
+      "custom_css": [
+        "h2 {text-align: center; margin-bottom: 2em; font-family: serif; letter-spacing: 0.05em;}",
+        "@media (min-width: 769px) {h2 {letter-spacing: 0.2em; }}"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_7zy4pj": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_7XFgih": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>GRID-TEC+は、<br/>B.V.D.からGOOD FARへ。</strong></h2>"
+          }
+        },
+        "contents_text_L9hH7Q": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>着た瞬間から暖かいベースレイヤー「GRID-TEC+」は、これまで良質な衣料品を展開するブランドB.V.D.として販売してきました。これからは、アウトドアフィールドを楽しむユーザーの体験をサポートする新ブランド「GOOD FAR」として、商品の販売を開始します。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_7XFgih",
+        "contents_text_L9hH7Q"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {h2 br {display: none; }}"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_HdAtGf": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_ejpJCf": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>アウトドアベースレイヤーの価格妥当性への挑戦</strong></h2>"
+          }
+        },
+        "contents_image_Enarhc": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/P7A4323.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 0,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_gGTgW8": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>GOOD FARの母体となるフジボウアパレルは、1949年（昭和24年）の創業以来70年以上にわたり、インナーウェアを中心としたアパレル製造に携わってきました。</p><p>ヒマラヤ登山のような過酷な環境に挑むには、高機能なベースレイヤーが不可欠です。</p><p>国内アウトドアレジャーへのニーズが高まる一方で、物価高や円安などを背景に、高機能なベースレイヤーは軒並み価格が高く、手を伸ばしづらいのが現状です。</p><p>私たちは、決して廉価だけを追い求めるのではなく、有識者が納得できる必要な機能にフォーカスしそれを備えることで、価格に見合い多くのユーザーが求めるインナー・ベースレイヤーをご提供できると確信しました。長年のインナー製造で培ったノウハウを最大限活用し、アウトドアフィールドを楽しむプレイヤーに寄り添い、価値を提供していきます。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_ejpJCf",
+        "contents_image_Enarhc",
+        "contents_text_gGTgW8"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_ar9FcT": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_HcYrm9": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>自然と向き合うファンクショナル</strong></h2>"
+          }
+        },
+        "contents_image_3HBRY7": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/P7A3342.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_TaYWxn": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>一般的な防寒インナーには吸湿発熱という機能を備えるものが多くありますが、この機能は、体から出る汗や湿気などの水分を使って熱を生み出すもの。都会で暮らし重ね着をする人には有効ですが、キャンプでテントを立てるときに暑くなり汗をかき、手を止めたときに体が冷える。そんな「行動と停滞」を繰り返す人や、釣りや登山をする人には、不向きな場合があります。</p><p>酷暑化する夏は、これまで以上に汗をかきます。衣類を作る糸や布には、水分の吸い方にそれぞれ特性があります。夏は汗を吸うインナーが必要というイメージがありますが、必ずしもそうとは限りません。</p><p>汗を吸いすぎる素材は、吸収した汗が乾かず、肌の不快感や匂いの原因になります。登山の停滞時やクーラーの冷気の中では、その汗が冷えて体温を奪います。</p><p>止まっているときに暖かい冬インナー、汗を吸わずに放出していくベースレイヤーなど、GOOD FARはベースレイヤーの価値の見直しを提案していきます。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_HcYrm9",
+        "contents_image_3HBRY7",
+        "contents_text_TaYWxn"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_gYFEjc": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_DpYY9b": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>持続可能な社会をつくる取り組み</strong></h2>"
+          }
+        },
+        "contents_image_DiiLxF": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/A905DBDBA137058FBA1C4212E03593FE51F1AC5C.jpg",
+            "contents-image-caption": "※中禅寺湖を中心に奥日光の歴史ある釣り文化の継承や自然環境の保全等の活動を行うLakeside storiesの方々が、ヒメマスの発眼卵放流を行なっている写真です。",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_Rt3B3G": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>アウトドアフィールドには、無限の可能性が秘められています。</p><p>次の世代にこの自然を残していくために、再生素材や天然素材の活用はもちろん、自然の楽しさを伝える活動や環境保全活動への参画など、アパレル製造業として向き合うべき「自然と共存していく取り組み」も行っていきます。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_DpYY9b",
+        "contents_image_DiiLxF",
+        "contents_text_Rt3B3G"
+      ],
+      "custom_css": [
+        "figcaption {text-align: left; color: #888;}"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "gf_contents_common_pN4hKn",
+    "gf_contents_common_7zy4pj",
+    "gf_contents_common_HdAtGf",
+    "gf_contents_common_ar9FcT",
+    "gf_contents_common_gYFEjc"
+  ]
+}

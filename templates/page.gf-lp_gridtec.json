@@ -1,0 +1,156 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "gf-lp",
+  "sections": {
+    "gf_lp_header": {
+      "type": "gf-lp-header",
+      "settings": {
+        "logo": "shopify://shop_images/gf-logo_text-bk.svg",
+        "logo_link": "/",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "gf_lp_mainvisual_Km9hKN": {
+      "type": "gf-lp-mainvisual",
+      "name": "GF LP Mainvisual",
+      "settings": {
+        "image_pc": "shopify://shop_images/lp-grid-tec_main_pc.png",
+        "image_sp": "shopify://shop_images/lp-grid-tec_main_sp.png",
+        "aspect_ratio_pc": "16 / 9",
+        "aspect_ratio_sp": "4 / 5",
+        "eyebrow": "GOOD FARのGRID-TEC+はここが違う",
+        "title": "GRID-TEC+ 2026",
+        "text_position_pc": "middle-left",
+        "text_position_sp": "bottom-center",
+        "eyebrow_font_size_pc": 16,
+        "eyebrow_font_size_sp": 13,
+        "eyebrow_color_pc": "#ffffff",
+        "eyebrow_color_sp": "#ffffff",
+        "title_font_size_pc": 56,
+        "title_font_size_sp": 32,
+        "title_color_pc": "#ffffff",
+        "title_color_sp": "#ffffff",
+        "lead": "",
+        "lead_font_size_pc": 18,
+        "lead_font_size_sp": 15,
+        "lead_color": "",
+        "lead_text_align": "center",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "gf_contents_common_3hQgxC": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_JmtU7D": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>GRID-TEC+は、B.V.D.からGOOD FARへ</strong></h2>"
+          }
+        },
+        "contents_text_jgXN7Q": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>B.V.D. からスピンオフする新ブランド「GOOD FAR」が立ち上がりました。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_JmtU7D",
+        "contents_text_jgXN7Q"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_MTDU3T": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_text_image_fe4ca6": {
+          "type": "contents-text-image",
+          "settings": {
+            "contents-text-image-column1": "shopify://shop_images/lp-grid-tec_img1.png",
+            "contents-text-image-column2": "<p>サムホールモデルはウォッチホール付き</p>",
+            "contents-text-image-checkbox": false
+          }
+        },
+        "contents_text_image_9T4e9U": {
+          "type": "contents-text-image",
+          "settings": {
+            "contents-text-image-column1": "shopify://shop_images/lp-grid-tec_img2.png",
+            "contents-text-image-column2": "<p>フーディーが開口し易くなりました。</p>",
+            "contents-text-image-checkbox": true
+          }
+        },
+        "contents_text_image_7f89Cx": {
+          "type": "contents-text-image",
+          "settings": {
+            "contents-text-image-column1": "shopify://shop_images/lp-grid-tec_img3.png",
+            "contents-text-image-column2": "<p>2XLまでサイズを展開</p>",
+            "contents-text-image-checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "contents_text_image_fe4ca6",
+        "contents_text_image_9T4e9U",
+        "contents_text_image_7f89Cx"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_GeEABT": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_bEmDaz": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2>GRID-TEC+を100名にプレゼント</h2>"
+          }
+        },
+        "contents_text_mGmw8y": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>インスタグラムアカウントもB.V.D.からGOOD FARへと変わりました。<br/>GOOD FARアカウントをフォローして、本キャンペーン対象の投稿にいいねした方のかなから抽選で100名様にGRID-TEC+2026年モデルをプレゼント。。<br/>詳細はQRコードから。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_bEmDaz",
+        "contents_text_mGmw8y"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "gf_lp_header",
+    "gf_lp_mainvisual_Km9hKN",
+    "gf_contents_common_3hQgxC",
+    "gf_contents_common_MTDU3T",
+    "gf_contents_common_GeEABT"
+  ]
+}

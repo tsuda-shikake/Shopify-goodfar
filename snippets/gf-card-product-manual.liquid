@@ -1,0 +1,65 @@
+{% comment %}
+  手動商品リスト用の商品カードスニペット（画像・商品名・リンク先すべて手動設定）
+
+  Accepts:
+  - image: {Object} メイン画像（image_picker）
+  - image_hover: {Object} マウスオーバー用画像（image_picker・任意）
+  - title: {String} 商品名（手動入力テキスト）
+  - url: {String} リンク先URL（手動入力。バリエーションカラーのURLなどを指定）
+  - enable_image_hover: {Boolean} マウスオーバーで画像を切り替えるかどうか（セクション設定）
+
+  Usage:
+  {% render 'gf-card-product-manual',
+    image: block.settings.image,
+    image_hover: block.settings.image_hover,
+    title: block.settings.title,
+    url: block.settings.url,
+    enable_image_hover: section.settings.enable_image_hover
+  %}
+{% endcomment %}
+
+{%- liquid
+  assign show_hover = false
+  if enable_image_hover and image_hover
+    assign show_hover = true
+  endif
+-%}
+
+<a
+  href="{{ url }}"
+  class="card-product-manual{% if show_hover %} card-product-manual--hover{% endif %}"
+>
+  <div class="card-product-manual__media">
+    {%- if image -%}
+      {{
+        image
+        | image_url: width: 800
+        | image_tag:
+          loading: 'lazy',
+          sizes: '(min-width: 750px) 25vw, 50vw',
+          widths: '200, 300, 400, 600, 800',
+          class: 'card-product-manual__image card-product-manual__image--primary',
+          alt: title
+      }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'card-product-manual__image card-product-manual__image--primary placeholder' }}
+    {%- endif -%}
+
+    {%- if show_hover -%}
+      {{
+        image_hover
+        | image_url: width: 800
+        | image_tag:
+          loading: 'lazy',
+          sizes: '(min-width: 750px) 25vw, 50vw',
+          widths: '200, 300, 400, 600, 800',
+          class: 'card-product-manual__image card-product-manual__image--secondary',
+          alt: title
+      }}
+    {%- endif -%}
+  </div>
+
+  {%- if title != blank -%}
+    <p class="card-product-manual__title">{{ title }}</p>
+  {%- endif -%}
+</a>

@@ -127,10 +127,21 @@
         "padding_top": 100,
         "padding_bottom": 40
       }
+    },
+    "custom_liquid_wkJMLk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n#fsb_background{\n    height: 42px;\n}\n#fsb_bar{\n    padding-top: 12px !important;\n    padding-bottom: 12px !important;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "custom_liquid_wkJMLk"
   ]
 }

@@ -27,23 +27,38 @@
         "image_sp": "shopify://shop_images/lp-grid-tec_main_sp.png",
         "aspect_ratio_pc": "16 / 9",
         "aspect_ratio_sp": "4 / 5",
+        "logo_image": "shopify://shop_images/gf-logo.svg",
+        "logo_width_pc": 25,
+        "logo_horizontal_align_pc": "left",
+        "logo_horizontal_offset_pc": 10,
+        "logo_vertical_align_pc": "top",
+        "logo_vertical_offset_pc": 25,
+        "logo_width_sp": 30,
+        "logo_horizontal_align_sp": "left",
+        "logo_horizontal_offset_sp": 5,
+        "logo_vertical_align_sp": "top",
+        "logo_vertical_offset_sp": 30,
         "eyebrow": "GOOD FARのGRID-TEC+はここが違う",
-        "title": "GRID-TEC+ 2026",
-        "text_position_pc": "middle-left",
-        "text_position_sp": "bottom-center",
-        "eyebrow_font_size_pc": 16,
-        "eyebrow_font_size_sp": 13,
+        "title": "<strong>GRID-TEC+ 2026</strong>",
+        "content_max_width": 700,
+        "content_horizontal_align_pc": "left",
+        "content_horizontal_offset_pc": 5,
+        "content_vertical_align_pc": "bottom",
+        "content_vertical_offset_pc": 20,
+        "content_horizontal_align_sp": "center",
+        "content_horizontal_offset_sp": 5,
+        "content_vertical_align_sp": "bottom",
+        "content_vertical_offset_sp": 10,
+        "eyebrow_font": "noto_sans_japanese_n4",
+        "eyebrow_font_size_pc": 1.4,
+        "eyebrow_font_size_sp": 3,
         "eyebrow_color_pc": "#ffffff",
         "eyebrow_color_sp": "#ffffff",
-        "title_font_size_pc": 56,
-        "title_font_size_sp": 32,
+        "title_font": "noto_sans_japanese_n4",
+        "title_font_size_pc": 3.6,
+        "title_font_size_sp": 8,
         "title_color_pc": "#ffffff",
         "title_color_sp": "#ffffff",
-        "lead": "",
-        "lead_font_size_pc": 18,
-        "lead_font_size_sp": 15,
-        "lead_color": "",
-        "lead_text_align": "center",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -56,7 +71,7 @@
           "type": "contents-title",
           "settings": {
             "contents-subtitle": "",
-            "contents-title": "<h2><strong>GRID-TEC+は、B.V.D.からGOOD FARへ</strong></h2>"
+            "contents-title": "<h2><strong>GRID-TEC+は、<br/>B.V.D.からGOOD FARへ</strong></h2>"
           }
         },
         "contents_text_jgXN7Q": {
@@ -69,6 +84,9 @@
       "block_order": [
         "contents_title_JmtU7D",
         "contents_text_jgXN7Q"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {h2 br {display: none; }}"
       ],
       "name": "Contents common",
       "settings": {
@@ -110,11 +128,15 @@
         "contents_text_image_9T4e9U",
         "contents_text_image_7f89Cx"
       ],
+      "custom_css": [
+        "@media (min-width: 769px) {.contents-common .contents-text-image {align-items: center; } .contents-common .contents-text-image img {width: 50%; }}",
+        "p {font-size: 1.4rem; line-height: 1.8;}"
+      ],
       "name": "Contents common",
       "settings": {
         "pagenav-id": "",
         "padding_top": 0,
-        "padding_bottom": 40
+        "padding_bottom": 80
       }
     },
     "gf_contents_common_GeEABT": {
@@ -124,24 +146,35 @@
           "type": "contents-title",
           "settings": {
             "contents-subtitle": "",
-            "contents-title": "<h2>GRID-TEC+を100名にプレゼント</h2>"
+            "contents-title": "<h2><strong>GRID-TEC+を<br/>100名にプレゼント</strong></h2>"
           }
         },
         "contents_text_mGmw8y": {
           "type": "contents-text",
           "settings": {
-            "contents-text": "<p>インスタグラムアカウントもB.V.D.からGOOD FARへと変わりました。<br/>GOOD FARアカウントをフォローして、本キャンペーン対象の投稿にいいねした方のかなから抽選で100名様にGRID-TEC+2026年モデルをプレゼント。。<br/>詳細はQRコードから。</p>"
+            "contents-text": "<p>インスタグラムアカウントもB.V.D.からGOOD FARへと変わりました。<br/>GOOD FARアカウントをフォローして、本キャンペーン対象の投稿にいいねした方の中から抽選で100名様にGRID-TEC+2026年モデルをプレゼント。</p>"
+          }
+        },
+        "button_kpQcPx": {
+          "type": "button",
+          "settings": {
+            "button-text": "キャンペーン投稿はこちら",
+            "button-link": "https://www.instagram.com/p/DaAD-v9ongl/"
           }
         }
       },
       "block_order": [
         "contents_title_bEmDaz",
-        "contents_text_mGmw8y"
+        "contents_text_mGmw8y",
+        "button_kpQcPx"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {h2 br {display: none; }}"
       ],
       "name": "Contents common",
       "settings": {
         "pagenav-id": "",
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 40
       }
     }

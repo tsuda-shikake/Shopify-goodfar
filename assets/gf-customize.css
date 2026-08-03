@@ -156,6 +156,64 @@ contents-common
 }
 
 /*=====================
+gf-contents-toc
+=====================*/
+.contents-toc{
+  max-width: 64rem;
+  margin: auto;
+  color: black;
+  width: 90%;
+}
+@media (min-width: 769px) {
+  .contents-toc{
+    width: 96%;
+  }
+}
+.contents-toc__heading{
+  font-size: 1.3rem;
+  letter-spacing: 0.2em;
+  margin: 0 0 1em;
+  text-align: center;
+}
+.contents-toc__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+.contents-toc__item{
+  counter-increment: contents-toc-count;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.contents-toc__list{
+  counter-reset: contents-toc-count;
+}
+.contents-toc__link{
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  padding: 1.2em 0.5em;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+.contents-toc__link:hover{
+  opacity: 0.6;
+}
+.contents-toc__num::before{
+  content: counter(contents-toc-count) ".";
+  font-weight: bold;
+}
+@media (min-width: 769px) {
+  .contents-toc__link{
+    font-size: 1.4rem;
+    padding: 1.4em 0.5em;
+  }
+}
+
+/*=====================
 gf-mainvisual
 =====================*/
 .gf-mainvisual {

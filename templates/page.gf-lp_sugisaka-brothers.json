@@ -1,0 +1,540 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "gf-lp",
+  "sections": {
+    "gf_lp_header": {
+      "type": "gf-lp-header",
+      "settings": {
+        "logo": "shopify://shop_images/gf-logo_text-bk.svg",
+        "logo_link": "/",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "gf_lp_mainvisual": {
+      "type": "gf-lp-mainvisual",
+      "custom_css": [
+        "h1 strong {display: inline-block; background: #000; padding: 0.15em 1em;}",
+        ".lp-hero__eyebrow p {display: inline-block; background: #000; padding: 0.15em 1em;}",
+        "@media screen and (min-width: 769px) {h1 br {display: none; }}"
+      ],
+      "name": "GF LP Mainvisual",
+      "settings": {
+        "image_pc": "shopify://shop_images/DSF4191_pc.jpg",
+        "image_sp": "shopify://shop_images/DSF4191_sp.jpg",
+        "aspect_ratio_pc": "16 / 9",
+        "aspect_ratio_sp": "4 / 5",
+        "logo_width_pc": 25,
+        "logo_horizontal_align_pc": "left",
+        "logo_horizontal_offset_pc": 10,
+        "logo_vertical_align_pc": "top",
+        "logo_vertical_offset_pc": 25,
+        "logo_width_sp": 30,
+        "logo_horizontal_align_sp": "left",
+        "logo_horizontal_offset_sp": 5,
+        "logo_vertical_align_sp": "top",
+        "logo_vertical_offset_sp": 30,
+        "eyebrow": "<p><strong>杉坂ブラザーズ</strong>（プロフライフィッシャー）</p>",
+        "title": "<p><strong>自然を満喫できる</strong></p><p><strong>フライフィッシングの魅力</strong></p>",
+        "content_max_width": 1200,
+        "content_horizontal_align_pc": "left",
+        "content_horizontal_offset_pc": 5,
+        "content_vertical_align_pc": "bottom",
+        "content_vertical_offset_pc": 20,
+        "content_horizontal_align_sp": "left",
+        "content_horizontal_offset_sp": 5,
+        "content_vertical_align_sp": "bottom",
+        "content_vertical_offset_sp": 10,
+        "eyebrow_font": "noto_sans_japanese_n4",
+        "eyebrow_font_size_pc": 1.2,
+        "eyebrow_font_size_sp": 3,
+        "eyebrow_color_pc": "#ffffff",
+        "eyebrow_color_sp": "#ffffff",
+        "title_font": "noto_sans_japanese_n4",
+        "title_font_size_pc": 3.1,
+        "title_font_size_sp": 5.3,
+        "title_color_pc": "#ffffff",
+        "title_color_sp": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_text_sb_lead": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>今再注目されているアウトドアアクティビティ「フライフィッシング」。渓流をトレッキングしながら、ロッドをしならせる。季節の変化や、川の状況、次に行きたいスポットの話をしながら探検をする。自然を満喫する魅力の詰まったフライフィッシングについて、プロフライフィッシャーである杉坂ブラザーズのお二人に伺いました。</p>"
+          }
+        },
+        "contents_text_sb_intro1": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>杉坂ブラザーズは、地元岡崎を起点に世界中のポイントで釣りをするプロフライフィッシャー。 「釣りといえば、海釣りを思い浮かべる方が多いと思うのですが、釣りにはたくさんの種類があります。世界の中でも、日本は釣りの種類が本当に多いんですよね。こんな国は、世界中を探しても他にない。」そう兄の友大郎さんが教えてくれました。<br/>彼らはフライフィッシングを愛し、他の釣りのスタイルにはないフライフィッシングの魅力を日本中に伝えています。</p>"
+          }
+        },
+        "contents_text_sb_note": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<h6>※フライフィッシングとは、虫や小魚を模した「フライ」と呼ばれる人工の毛ばりを使って魚を釣るスタイルです。通常の釣りとは違い、糸（ライン）自体に重さがあり、それを使ってフライを遠くへ投げるのが特徴です。</h6>"
+          }
+        },
+        "contents_text_sb_intro2": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>杉坂ブラザーズの考えるフライフィッシングの魅力は、魚を釣ることだけでなく、トレッキングしながら魚を探す“探検をしている”ようなワクワク感と、アメカジをミックスしたファッションスタイル。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_text_sb_lead",
+        "contents_text_sb_intro1",
+        "contents_text_sb_note",
+        "contents_text_sb_intro2"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
+    "gf_contents_toc_sb": {
+      "type": "gf-contents-toc",
+      "blocks": {
+        "toc_item_sb_1": {
+          "type": "toc-item",
+          "settings": {
+            "text": "トレッキングとフィッシングを楽しむ探検体験",
+            "link": "#sb-section1"
+          }
+        },
+        "toc_item_sb_2": {
+          "type": "toc-item",
+          "settings": {
+            "text": "杉坂ブラザーズ的ニューアメリカンスタイル",
+            "link": "#sb-section2"
+          }
+        },
+        "toc_item_sb_3": {
+          "type": "toc-item",
+          "settings": {
+            "text": "帰国してプロフライフィッシャーになる",
+            "link": "#sb-section3"
+          }
+        },
+        "toc_item_sb_4": {
+          "type": "toc-item",
+          "settings": {
+            "text": "世界中をまたにかけるフライフィッシングのグローバルシーン",
+            "link": "#sb-section4"
+          }
+        }
+      },
+      "block_order": [
+        "toc_item_sb_1",
+        "toc_item_sb_2",
+        "toc_item_sb_3",
+        "toc_item_sb_4"
+      ],
+      "name": "Contents 目次",
+      "settings": {
+        "pagenav-id": "",
+        "heading": "目次",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_sb_sec1": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_sb_sec1": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>トレッキングとフィッシングを楽しむ探検体験</strong></h2>"
+          }
+        },
+        "contents_image_sb_sec1_01": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF4112.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_ng3xm4": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3858.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec1_01": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>渓流での釣りは、魚を探しながら上流へ上がっていきます。<br/>川の流れを見ながら魚が隠れてそうな場所を探す。季節ごとに草木の変化を楽しむ、魚が食べている虫も季節で変化するので、どんな虫がいるかを観察しながら季節に合わせたフライ(水生昆虫や小魚などを模した疑似餌の一種)にセッティングを変える。</p>"
+          }
+        },
+        "contents_image_ERGXzU": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF4109.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec1_02": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>撮影地は、彼らの地元岡崎から2時間程度車を走らせた長野県の山井。川に入る前に近隣の農家さんに川の状況を聞くと、「最近は鵜(水鳥)がきて魚が全然いないよ」との情報をキャッチ。川に入ると澄んでいて川底まで綺麗に見える。農家さんから伺った通り、魚が全くいない状況。それでも二人は「とりあえず入ってみましょう。」といって、川中を上流に向かっていく。</p>"
+          }
+        },
+        "contents_image_xFdYhq": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3310.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec1_03": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>川中で目視できる魚が全くいない中でも魚を釣っていく二人。<br/>「草が斜めに交差している奥に、魚が隠れているかもしれない。そこに目掛けてロッド(釣り竿)をしならせながら距離と位置を定めてフライをピンポイントで投げ込む。そこに魚がいて、食いついてくれたら最高に気持ちいいんですよ」<br/>そう楽しそうに語る二人は、夏休みの子どものように探検をしながら前に進んでいきます。</p>"
+          }
+        },
+        "contents_image_b7gFyJ": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF4020.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_J8dXbc": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF4191.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec1_04": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>渓流をトレッキングしながら、ロッドをしならせる。季節の変化や、川の状況、次に行きたいスポットの話をする。自然を満喫する魅力がフライフィッシングには詰まっていました。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_sb_sec1",
+        "contents_image_sb_sec1_01",
+        "contents_image_ng3xm4",
+        "contents_text_sb_sec1_01",
+        "contents_image_ERGXzU",
+        "contents_text_sb_sec1_02",
+        "contents_image_xFdYhq",
+        "contents_text_sb_sec1_03",
+        "contents_image_b7gFyJ",
+        "contents_image_J8dXbc",
+        "contents_text_sb_sec1_04"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "sb-section1",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_sb_sec2": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_sb_sec2": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>杉坂ブラザーズ的ニューアメリカンスタイル</strong></h2>"
+          }
+        },
+        "contents_image_sb_sec2_01": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3554.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_LxPDJN": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3528.jpg",
+            "contents-image-caption": "※撮影協力：杉坂ブラザーズの友人が営むJANTIQUE BURGER",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec2_01": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>釣りの服装というとツバの曲がった帽子にベストを着て、足元は長靴で固める機能性を求めたイメージをされる人もいると思いますが、最近では機能性の高いアウトドアファッションも増え、フィッシャー(釣りをする人)の中でも多様なスタイルが取り入れられています。<br/>中でも杉坂ブラザーズは、オーセンティックなアメリカスタイルとアメカジを掛け合わせたニューアメリカンスタイル。<br/>ウエスタンハットに白いTシャツをタックインし、オープンカラーのシャツを合わせる。ウエーダー(水が入らないように防水された繋ぎ)を着ていてもスタイリッシュで、ウエーダーを脱いでジーパンとオールスターに履き替えれば、街中でも映えるスタイル。</p>"
+          }
+        },
+        "contents_image_G8UCib": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3948.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_R8gccr": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3993.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_VfhrCr": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF4010.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec2_02": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>「アメリカで見たフライフィッシングフィルムに映っていたフィッシャーは、ツバの折れ曲がったキャップではなく、手入れの行き届いたハットを被ってかっこよかったんですよね。僕たちはファッションの人間ではないけど、フライフィッシングのスタイルってカッコいいなーと思ってもらえれば、興味を持ってくれる人が増えるかなと思い、お店にもアパレルをおいたり、渓流釣りには欠かせない偏光のサングラスなどもデザインしています。」</p>"
+          }
+        },
+        "contents_image_BAzE8a": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3389.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_CnmiDy": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3218.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_HgP3ew": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3214.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_a4fNMT": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3219.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec2_03": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>そのルーツは、友大郎(兄)が高校生の時に流行った古着屋に、渓亮(弟)を連れて出入りし始めたことと、アメリカへの留学がきっかけだったと語ります。<br/>アメカジやアメ車が好きな二人は高校を卒業した時に留学をします。プロフライフィッシャーである父の研治氏が、留学先に選んだ場所は、アメリカ西部。友大郎(兄)はモンタナへ、渓亮(弟)はアイダホ。アメカジ好きの青年は、憧れのロサンゼルスを諦め、アメリカの田舎へ留学しました。実は、どちらもフライフィッシングの聖地とされるスポットがある場所だったのですが、学生時代はほとんど釣りをやっていませんでした。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_sb_sec2",
+        "contents_image_sb_sec2_01",
+        "contents_image_LxPDJN",
+        "contents_text_sb_sec2_01",
+        "contents_image_G8UCib",
+        "contents_image_R8gccr",
+        "contents_image_VfhrCr",
+        "contents_text_sb_sec2_02",
+        "contents_image_BAzE8a",
+        "contents_image_CnmiDy",
+        "contents_image_HgP3ew",
+        "contents_image_a4fNMT",
+        "contents_text_sb_sec2_03"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "sb-section2",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_sb_sec3": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_sb_sec3": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>日本に戻りプロフライフィッシャーになる</strong></h2>"
+          }
+        },
+        "contents_image_sb_sec3_01": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3197.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec3_01": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>大学を卒業し、実家の家業であるスーパーを継ぐために呼び戻された友大郎。それから一年して父研治氏から「スーパーを閉めるから、お前も釣りで食って行かないと行けない」と告げられました。<br/>寝耳に水ですが、生活するためには釣りで生計をたてるしかない。ECサイトを立ち上げ、父とオリジナル商品を作り販売していく。梱包と発送作業を繰り返しながら、フライフィッシングを本格的に始めました。同様に渓介も呼び戻され、家族3人でフライフィッシングで生計を立てていきます。<br/>二人は20代でプロフライフィッシャーとして活動を始めたものの、フライフィッシングは50代で若手と言われるシーン。その中で台頭していくためには、新しいスタイルを確立し、新しいファンを作り、フライフィッシングの裾野を広げていくしかないと考え、今のスタイルに行きつきました。</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_sb_sec3",
+        "contents_image_sb_sec3_01",
+        "contents_text_sb_sec3_01"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "sb-section3",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "gf_contents_common_sb_sec4": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_sb_sec4": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h2><strong>世界中をまたにかけるフライフィッシングのグローバルシーン</strong></h2>"
+          }
+        },
+        "contents_image_sb_sec4_01": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/sugisaka-bro_cuba.jpg",
+            "contents-image-caption": "※キューバでターポンを釣ったシーン。",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec4_01": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>彼らの挑戦はファッションだけではありません。それは世界のフライフィッシングスポットで釣りをすること。<br/>フライフィッシング憧れの地フロリダをはじめ、二人が留学していたモンタナ、アイダホ、そしてアメリカフライフィッシング発祥の地と言われるキャッツキル(ニューヨーク)。その他にロシア、アマゾン、ボリビア、ベネズエラ、キューバ、パタゴニア(アルゼンチン)、モルジブ、アイスランド、ニュージーランド　クリスマス島(キリバス共和国)など世界を股にかけて釣りをしています。<br/>「フライフィッシングのグローバルシーンは確立されていて、常に新しいスポットの情報がやり取りされています。その情報をキャッチして、まだ開拓されていない世界中のスポットに向かいます。見たことのない場所を探検しながら魚を釣る。日本では想像もつかないようなサイズの魚もいてマジでワクワクしますよ。」<br/>彼らは、趣味としてだけでなく釣りを通して人生に影響を与えるような体験をしています。常にワクワクしながら次の釣りの事を考える。</p>"
+          }
+        },
+        "contents_image_MCdXVK": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/sugisaka-bro_bolivia.jpg",
+            "contents-image-caption": "※アマゾン川（ボリビア）",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_gp4bg3": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/sugisaka-bro_newzealand.jpg",
+            "contents-image-caption": "※ニュージランド",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_8KAYLg": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/sugisaka-bro_russia.jpg",
+            "contents-image-caption": "※ロシア",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec4_03": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>童心を忘れない兄弟は、フライフィッシングの魅力を伝えるために、ロッドを持って日本全国さらに世界中を探検しています。</p>"
+          }
+        },
+        "contents_image_nxmKam": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/DSF3363.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_text_sb_sec4_04": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>「フライフィッシングは、誰でもはじめられるアクティビティです。トレッキングの気持ち良い感じや、自然探検するワクワク感、あとおしゃれ(笑)。アウトドアアクティビティをやってる人、興味を持っている人に是非体験してもらいたいです。あと、子どもたちに自然の魅力や危険を知る事、世界はこんなに広くて楽しい場所や体験がたくさんあるんだよってことも伝えて行きたいなーと思っています。」</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_sb_sec4",
+        "contents_image_sb_sec4_01",
+        "contents_text_sb_sec4_01",
+        "contents_image_MCdXVK",
+        "contents_image_gp4bg3",
+        "contents_image_8KAYLg",
+        "contents_text_sb_sec4_03",
+        "contents_image_nxmKam",
+        "contents_text_sb_sec4_04"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "sb-section4",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "gf_lp_header",
+    "gf_lp_mainvisual",
+    "main",
+    "gf_contents_toc_sb",
+    "gf_contents_common_sb_sec1",
+    "gf_contents_common_sb_sec2",
+    "gf_contents_common_sb_sec3",
+    "gf_contents_common_sb_sec4"
+  ]
+}

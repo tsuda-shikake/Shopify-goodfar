@@ -25,7 +25,7 @@
         "text_6TpPf7": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"/blogs/topics/0729info\" title=\"熊本地震による被害についてのお見舞いと、配送への影響について\">熊本地震による被害についてのお見舞いと、配送への影響について</a></p>"
+            "text": "<p><a href=\"/blogs/topics/0729info\" title=\"熊本地震による被害についてのお見舞いと、配送への影響について\">熊本地震による配送への影響について</a></p>"
           }
         }
       },
@@ -246,7 +246,7 @@
             "image": "shopify://shop_images/top-look-banner_field-play-tec.jpg",
             "heading-sub": "暑い日こそ遊びたくなるTシャツ",
             "heading": "<h3>Field Play Tec</h3>",
-            "link": "shopify://collections/field-play-tec"
+            "link": "shopify://pages/feild-play-tec-t"
           }
         },
         "image_9XaAcf": {
@@ -255,7 +255,7 @@
             "image": "shopify://shop_images/top-look-banner_grid-dry.jpg",
             "heading-sub": "山が近くなるベースレイヤー",
             "heading": "<h3>GRID-DRY</h3>",
-            "link": "shopify://collections/grid-dry"
+            "link": "shopify://pages/grid-dry"
           }
         }
       },

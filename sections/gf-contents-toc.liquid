@@ -1,0 +1,96 @@
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 769px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+{%- endstyle -%}
+<div class="contents-toc section-{{ section.id }}-padding"{%- if section.settings.pagenav-id != blank -%} id="{{ section.settings.pagenav-id }}"{%- endif -%}>
+  {%- if section.settings.heading != blank -%}
+    <p class="contents-toc__heading">{{ section.settings.heading }}</p>
+  {%- endif -%}
+  <ol class="contents-toc__list">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'toc-item' and block.settings.link != blank -%}
+        <li class="contents-toc__item" {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.link }}" class="contents-toc__link">
+            <span class="contents-toc__num"></span>
+            <span class="contents-toc__text">{{ block.settings.text }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ol>
+</div>
+
+{% schema %}
+  {
+    "name": "Contents 目次",
+    "settings": [
+      {
+        "type": "text",
+        "id": "pagenav-id",
+        "label": "ページ内リンク用ID"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "目次",
+        "label": "見出し"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 40
+      }
+    ],
+    "blocks": [
+      {
+        "type": "toc-item",
+        "name": "目次項目",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "テキスト"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "リンク先（ページ内リンクの場合は #id 形式）"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contents 目次",
+        "blocks": [
+          { "type": "toc-item" },
+          { "type": "toc-item" },
+          { "type": "toc-item" }
+        ]
+      }
+    ]
+  }
+{% endschema %}

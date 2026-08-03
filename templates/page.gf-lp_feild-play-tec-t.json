@@ -1,0 +1,205 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "gf-lp",
+  "sections": {
+    "gf_lp_header": {
+      "type": "gf-lp-header",
+      "settings": {
+        "logo": "shopify://shop_images/gf-logo_text-bk.svg",
+        "logo_link": "/",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "gf_lp_mainvisual": {
+      "type": "gf-lp-mainvisual",
+      "name": "GF LP Mainvisual",
+      "settings": {
+        "image_pc": "shopify://shop_images/top1_pc.png",
+        "image_sp": "shopify://shop_images/top1_sp.png",
+        "aspect_ratio_pc": "16 / 9",
+        "aspect_ratio_sp": "4 / 5",
+        "logo_image": "shopify://shop_images/gf-logo_bottom-bk.svg",
+        "logo_width_pc": 25,
+        "logo_horizontal_align_pc": "right",
+        "logo_horizontal_offset_pc": 10,
+        "logo_vertical_align_pc": "top",
+        "logo_vertical_offset_pc": 25,
+        "logo_width_sp": 30,
+        "logo_horizontal_align_sp": "right",
+        "logo_horizontal_offset_sp": 5,
+        "logo_vertical_align_sp": "top",
+        "logo_vertical_offset_sp": 30,
+        "eyebrow": "",
+        "title": "",
+        "content_max_width": 700,
+        "content_horizontal_align_pc": "left",
+        "content_horizontal_offset_pc": 5,
+        "content_vertical_align_pc": "bottom",
+        "content_vertical_offset_pc": 20,
+        "content_horizontal_align_sp": "center",
+        "content_horizontal_offset_sp": 5,
+        "content_vertical_align_sp": "bottom",
+        "content_vertical_offset_sp": 10,
+        "eyebrow_font": "noto_sans_japanese_n4",
+        "eyebrow_font_size_pc": 1.4,
+        "eyebrow_font_size_sp": 3,
+        "eyebrow_color_pc": "#ffffff",
+        "eyebrow_color_sp": "#ffffff",
+        "title_font": "noto_sans_japanese_n4",
+        "title_font_size_pc": 3.6,
+        "title_font_size_sp": 8,
+        "title_color_pc": "#ffffff",
+        "title_color_sp": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "gf_contents_common_fp_price": {
+      "type": "gf-contents-common",
+      "blocks": {
+        "contents_title_fp_price": {
+          "type": "contents-title",
+          "settings": {
+            "contents-subtitle": "",
+            "contents-title": "<h1><strong>Field Play Tec T-shirt</strong></h1>"
+          }
+        },
+        "contents_text_fp_price3": {
+          "type": "contents-text",
+          "settings": {
+            "contents-text": "<p>ポリエステル100%。ラッシュガードのような高い速乾性を備えながら、コットンライクな肌当たりを実現したTシャツです。</p><p>汗をかいてもべたつかず、川遊びの後もすぐに乾く。肌離れがよく心地よい着用感で、アウトドアフィールドや自転車（バイク）を楽しむ人に向けた一着です。</p><p>発売と同時に、イラストレーター／アートディレクターとして活躍する一方、トレイルランニングでは100マイルレースを完走するなど、アウトドアカルチャーを牽引するクリエイター・ジェリー鵜飼氏による書き下ろしイラストが配された別注モデルも展開します。</p>"
+          }
+        },
+        "contents_image_Rf6Lzf": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/top-look-banner_field-play-tec.jpg",
+            "contents-image-caption": "",
+            "image_bottom": 2,
+            "contents-image-checkbox": false
+          }
+        },
+        "contents_image_jx66C8": {
+          "type": "contents-image",
+          "settings": {
+            "contents-image": "shopify://shop_images/top4_sp.png",
+            "contents-image-caption": "",
+            "image_bottom": 20,
+            "contents-image-checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "contents_title_fp_price",
+        "contents_text_fp_price3",
+        "contents_image_Rf6Lzf",
+        "contents_image_jx66C8"
+      ],
+      "custom_css": [
+        "h1 {text-align: center; margin: 6rem auto;}"
+      ],
+      "name": "Contents common",
+      "settings": {
+        "pagenav-id": "",
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "gf_product_list_manual_PiCc6q": {
+      "type": "gf-product-list-manual",
+      "blocks": {
+        "product_UQFdUb": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1FP01_front-white.png",
+            "image_hover": "shopify://shop_images/GDF1FP01_back-white.jpg",
+            "title": "FIELD PLAY-TEC T-Shirts<br>¥7,480",
+            "url": "/products/gdf1fp01?variant=53564487827735"
+          }
+        },
+        "product_y8KR8r": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF1FP01_front-black.png",
+            "image_hover": "shopify://shop_images/GDF1FP01_front-black.png",
+            "title": "FIELD PLAY-TEC T-Shirts<br>¥7,480",
+            "url": "shopify://products/gdf1fp01"
+          }
+        },
+        "product_Ut9M3B": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF9FP01_white.png",
+            "image_hover": "shopify://shop_images/GDF9FP01_back-white.png",
+            "title": "FIELD PLAY-TEC JERRY鵜飼 T-Shirts<br>¥8,800",
+            "url": "/products/gdf9fp01?variant=53564598747415"
+          }
+        },
+        "product_978iVE": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/GDF9FP01_black.png",
+            "image_hover": "shopify://shop_images/GDF9FP01_back_black.png",
+            "title": "FIELD PLAY-TEC JERRY鵜飼 T-Shirts<br>¥8,800",
+            "url": "shopify://products/gdf9fp01"
+          }
+        }
+      },
+      "block_order": [
+        "product_UQFdUb",
+        "product_y8KR8r",
+        "product_Ut9M3B",
+        "product_978iVE"
+      ],
+      "name": "Product List Manual",
+      "settings": {
+        "heading": "Product",
+        "enable_image_hover": true,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_kMQN8Y": {
+      "type": "rich-text",
+      "blocks": {
+        "text_FM4irY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>2026年8月発売予定</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_FM4irY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "gf_lp_header",
+    "gf_lp_mainvisual",
+    "gf_contents_common_fp_price",
+    "gf_product_list_manual_PiCc6q",
+    "rich_text_kMQN8Y"
+  ]
+}
